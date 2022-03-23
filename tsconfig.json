@@ -5,6 +5,7 @@
     "allowJs": true,
     "skipLibCheck": true,
     "strict": false,
+    "downlevelIteration": true,
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "esModuleInterop": true,
@@ -12,17 +13,20 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve"
+    "jsx": "preserve",
+    "baseUrl": ".",
+    "paths": {
+      "components/*": ["components/*"],
+
+    }
   },
   "exclude": ["node_modules"],
   "include": [
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    "src/components/UploaderComponent.js",
-    "src/components/PostModal.js",
-    "src/pages/api/photos.js",
-    "libs/cloudinary.js",
-    "components/CampaignForm.jsx"
+    "**/*.js",
+    "**/*.jsx",
+    ".eslintrc.js",
   ]
 }

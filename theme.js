@@ -32,19 +32,7 @@ const theme = extendTheme({
         purple: "#34016A",
       },
     },
-    brandGreen: {
-      50: "#e0fefa",
-      100: "#bbf3ec",
-      200: "#95eadf",
-      300: "#6de1d2",
-      400: "#48d8c5",
-      500: "#31bfac",
-      600: "#239586",
-      700: "#156a5f",
-      800: "#054039",
-      900: "#001714",
-    },
-  },
-});
+  })
+
 
 export default theme;
