@@ -37,7 +37,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
             "Bring the Meta Network together for a rare cryptopalooza of fun, learning, and experimental growth in every direction.",
           images: [
             {
-              url: "/og-logo.png",
+              url: "/mcon-22.png",
               // url:
               //   "data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>:hot_pepper:</text></svg>",
               width: 1200,
