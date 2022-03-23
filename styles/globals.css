@@ -14,3 +14,7 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.img__border-rounded {
+  border-radius: "32px";
+}
