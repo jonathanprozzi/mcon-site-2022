@@ -127,6 +127,32 @@ const Hero = ({ heroHeight = "100vh" }: HeroProps) => (
           marginX="auto"
           paddingBottom={4}
         >
+          <ChakraLink
+            bgGradient="linear(to-r,#FF74F2, #74EEFF)"
+            bgClip="text"
+            _hover={{
+              bgGradient: "linear(to-r, #74EEFF, #FF74F2)",
+              textDecoration: "none"
+            }}
+            isExternal
+            href="https://yeet.daohaus.club/dao/0x1/0xc0da65b8c37125096e9d54bf02eb4bd8657f66b8/1"
+          >
+            Fund MCON
+          </ChakraLink>
+        </Heading>
+        <Heading
+          as="span"
+          textAlign="center"
+          color="white"
+          fontFamily="DisposableDroidBB"
+          fontSize="36px"
+          lineHeight={{ base: 9 }}
+          letterSpacing="tighter"
+          fontWeight="bold"
+          maxWidth="30ch"
+          marginX="auto"
+          paddingBottom={4}
+        >
           Follow the action on{" "}
           <ChakraLink
             bgGradient="linear(to-r,#FF74F2, #74EEFF)"
