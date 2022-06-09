@@ -10,23 +10,35 @@ export const config = {
 };
 
 const createEventSubmission: NextApiHandler = async (req, res) => {
-  const { contactName } = req.body;
-  const { contactEmail } = req.body;
+  const {
+    daoName,
+    eventTitle,
+    eventDescription,
+    eventStartTime,
+    eventEndTime,
+    organizerTelegramHandle,
+    otherNotes
+  } = req.body;
 
   try {
     const airtableRecord = await eventSubmissionsTable.create({
-      Name: contactName,
-      Email: contactEmail
+      "DAO Name": daoName,
+      "Event Title": eventTitle,
+      "Event Description": eventDescription,
+      "Event Start Time": eventStartTime,
+      "Event End Time": eventEndTime,
+      "Organizer Telegram Handle": organizerTelegramHandle,
+      "Other Notes": otherNotes
     });
 
     res.status(200).json({
-      msg: "went through!",
+      msg: "Success.",
       airtableRecord
     });
   } catch (error) {
     console.error(error);
     res.status(500).json({
-      err: "Something went wrong with creating the request."
+      err: "Something went wrong with submitting the event."
     });
   }
 };
