@@ -82,7 +82,7 @@ const Hero = ({ heroHeight = "100vh" }: HeroProps) => (
             textDecoration: "none"
           }}
           isExternal
-          href="https://metacartel.typeform.com/to/yiLK5My5"
+          href="https://yeet.daohaus.club/dao/0x1/0xc0da65b8c37125096e9d54bf02eb4bd8657f66b8/1"
         >
           <Button
             borderRadius="none"
@@ -98,34 +98,9 @@ const Hero = ({ heroHeight = "100vh" }: HeroProps) => (
               color: "primaryNeon"
             }}
           >
-            Apply to Attend
+            Fund MCON
           </Button>
         </ChakraLink>
-        <Heading
-          as="span"
-          textAlign="center"
-          fontFamily="Basteleur"
-          fontSize="36px"
-          lineHeight={{ base: 9 }}
-          letterSpacing="tighter"
-          fontWeight="bold"
-          maxWidth="30ch"
-          marginX="auto"
-          paddingBottom={4}
-        >
-          <ChakraLink
-            isExternal
-            href="https://yeet.daohaus.club/dao/0x1/0xc0da65b8c37125096e9d54bf02eb4bd8657f66b8/1"
-            fontFamily="Dagheest"
-            color="primaryNeon"
-            _hover={{
-              bgColor: "black",
-              color: "primaryNeon"
-            }}
-          >
-            Fund MCON
-          </ChakraLink>
-        </Heading>
         <Heading
           as="span"
           textAlign="center"

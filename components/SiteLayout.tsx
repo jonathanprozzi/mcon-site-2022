@@ -1,4 +1,5 @@
 import { Flex } from "@chakra-ui/react";
+import Navbar from "./Navbar";
 
 interface SiteLayoutProps {
   children: React.ReactChild;
@@ -16,7 +17,7 @@ const SiteLayout = ({ children, minHeight = "100vh" }: SiteLayoutProps) => {
       position="relative"
       background="primaryRed"
     >
-      {/* <Navbar />   can add Navbar if you have one */}
+      <Navbar />
       <Flex
         direction="column"
         align="center"

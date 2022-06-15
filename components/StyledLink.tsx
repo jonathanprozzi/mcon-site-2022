@@ -1,0 +1,30 @@
+import { Text, Link as ChakraLink } from "@chakra-ui/react";
+
+interface StyledLinkProps {
+  text: string;
+  fontSize?: string;
+  color?: string;
+}
+
+const StyledLink = ({
+  text,
+  fontSize = "2xl",
+  color = "primaryNeon"
+}: StyledLinkProps) => (
+  <ChakraLink textDecoration="none" marginRight={4}>
+    <Text
+      fontFamily="Dagheest"
+      fontSize={fontSize}
+      textTransform="uppercase"
+      color={color}
+      transition="all ease-in-out .25s"
+      _hover={{
+        color: "black"
+      }}
+    >
+      {text}
+    </Text>
+  </ChakraLink>
+);
+
+export default StyledLink;
