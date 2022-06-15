@@ -31,34 +31,32 @@ const Hero = ({ heroHeight = "100vh" }: HeroProps) => (
       alignItems="center"
       paddingBottom={{ base: 0, md: 10 }}
     >
-      <Box position="relative">
-        <Image
-          alt=""
-          width={400}
-          height={300}
-          objectFit="contain"
-          placeholder="blur"
-          blurDataURL="/mcon-22.png"
-          src="/mcon-22.png"
-        />
-      </Box>
+      <Heading
+        as="h2"
+        fontFamily="Basteleur"
+        fontSize="80px"
+        fontWeight="bold"
+        color="black"
+      >
+        MCON 2
+      </Heading>
       <Flex direction={{ base: "column" }} alignItems="center">
         <Text
           as="span"
-          fontFamily="Invasion2000"
-          fontSize="64px"
+          fontFamily="Basteleur"
+          color="black"
+          fontSize="36px"
           lineHeight={[6, 6, 9, 9]}
           letterSpacing="tighter"
           fontWeight="normal"
           maxWidth="30ch"
-          color="brand.cyan"
         >
-          6, 7, 8, 9
+          One for the DAO purists
         </Text>
 
         <Text
           as="span"
-          fontFamily="DisposableDroidBB"
+          fontFamily="Basteleur"
           fontSize="36px"
           lineHeight={{ base: 9 }}
           letterSpacing="tighter"
@@ -67,21 +65,9 @@ const Hero = ({ heroHeight = "100vh" }: HeroProps) => (
           marginTop={{ base: "5", md: "5" }}
           paddingY={{ base: "5", md: "0" }}
           flexWrap="wrap"
+          color="black"
         >
-          Tuesday, Wednesday Thursday, Friday
-        </Text>
-
-        <Text
-          as="span"
-          fontFamily="Invasion2000"
-          fontSize={["48px", "48px", "72px", "72px"]}
-          lineHeight={[6, 6, 9, 9]}
-          letterSpacing="wider"
-          fontWeight="bold"
-          color="brand.cyan"
-          paddingTop={{ base: 2, md: 6 }}
-        >
-          September
+          September 6 - 9th, 2022 Denver, Colorado
         </Text>
       </Flex>
       <Flex
@@ -99,17 +85,18 @@ const Hero = ({ heroHeight = "100vh" }: HeroProps) => (
           href="https://metacartel.typeform.com/to/yiLK5My5"
         >
           <Button
-            borderRadius="md"
+            borderRadius="none"
             paddingY={8}
             paddingX={8}
             fontSize="2xl"
             transition="all ease-in-out .25s"
-            bgGradient="linear(to-r,#FF74F2, #74EEFF)"
+            color="primaryRed"
+            bgColor="primaryNeon"
+            fontFamily="Dagheest"
             _hover={{
-              bgGradient: "linear(to-r, #74EEFF, #FF74F2)",
-              textDecoration: "none"
+              bgColor: "black",
+              color: "primaryNeon"
             }}
-            color="black"
           >
             Apply to Attend
           </Button>
@@ -117,8 +104,7 @@ const Hero = ({ heroHeight = "100vh" }: HeroProps) => (
         <Heading
           as="span"
           textAlign="center"
-          color="white"
-          fontFamily="DisposableDroidBB"
+          fontFamily="Basteleur"
           fontSize="36px"
           lineHeight={{ base: 9 }}
           letterSpacing="tighter"
@@ -128,14 +114,14 @@ const Hero = ({ heroHeight = "100vh" }: HeroProps) => (
           paddingBottom={4}
         >
           <ChakraLink
-            bgGradient="linear(to-r,#FF74F2, #74EEFF)"
-            bgClip="text"
-            _hover={{
-              bgGradient: "linear(to-r, #74EEFF, #FF74F2)",
-              textDecoration: "none"
-            }}
             isExternal
             href="https://yeet.daohaus.club/dao/0x1/0xc0da65b8c37125096e9d54bf02eb4bd8657f66b8/1"
+            fontFamily="Dagheest"
+            color="primaryNeon"
+            _hover={{
+              bgColor: "black",
+              color: "primaryNeon"
+            }}
           >
             Fund MCON
           </ChakraLink>
@@ -144,7 +130,7 @@ const Hero = ({ heroHeight = "100vh" }: HeroProps) => (
           as="span"
           textAlign="center"
           color="white"
-          fontFamily="DisposableDroidBB"
+          fontFamily="Basteleur"
           fontSize="36px"
           lineHeight={{ base: 9 }}
           letterSpacing="tighter"
@@ -155,12 +141,7 @@ const Hero = ({ heroHeight = "100vh" }: HeroProps) => (
         >
           Follow the action on{" "}
           <ChakraLink
-            bgGradient="linear(to-r,#FF74F2, #74EEFF)"
-            bgClip="text"
-            _hover={{
-              bgGradient: "linear(to-r, #74EEFF, #FF74F2)",
-              textDecoration: "none"
-            }}
+            color="primaryNeon"
             isExternal
             href="https://twitter.com/mcon_world"
           >

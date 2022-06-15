@@ -5,17 +5,25 @@ const Fonts = () => (
     styles={`
     /* latin */  
       @font-face {
-          font-family: "DisposableDroidBB";
-          src: url("/fonts/DisposableDroidBB/DisposableDroidBB_bld.ttf");
+          font-family: "Basteleur";
+          src: url("/fonts/Basteleur/Basteleur-Bold.ttf");
           font-style: bold;
           font-weight: 700;
           font-display: swap;
         }
+
+        @font-face {
+          font-family: "Basteleur";
+          src: url("/fonts/Basteleur/Basteleur-Moonlight.ttf");
+          font-style: moonlight;
+          font-weight: 400;
+          font-display: swap;
+        }
       
       @font-face {
-          font-family: "Invasion2000";
-          src: url("/fonts/Invasion2000/INVASION2000.TTF");
-          font-style: normal;
+          font-family: "Dagheest";
+          src: url("/fonts/Dagheest/FT88-Regular.TTF");
+          font-style: regular;
           font-weight: 400;
           font-display: swap;
         }
