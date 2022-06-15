@@ -177,9 +177,12 @@ const Navbar: React.FC = () => {
             color="primaryRed"
             bgColor="primaryNeon"
             fontFamily="Dagheest"
+            border="2px solid"
             _hover={{
               bgColor: "black",
-              color: "primaryNeon"
+              color: "primaryNeon",
+              border: "2px solid",
+              borderColor: "primaryNeon"
             }}
           >
             Apply to Attend

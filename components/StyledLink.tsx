@@ -8,7 +8,7 @@ interface StyledLinkProps {
 
 const StyledLink = ({
   text,
-  fontSize = "2xl",
+  fontSize = "xl",
   color = "primaryNeon"
 }: StyledLinkProps) => (
   <ChakraLink textDecoration="none" marginRight={4}>
