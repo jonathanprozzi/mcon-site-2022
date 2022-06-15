@@ -22,7 +22,7 @@ const Fonts = () => (
       
       @font-face {
           font-family: "Dagheest";
-          src: url("/fonts/Dagheest/FT88-Regular.TTF");
+          src: url("/fonts/Dagheest/FT88-Regular.ttf");
           font-style: regular;
           font-weight: 400;
           font-display: swap;
