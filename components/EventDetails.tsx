@@ -107,7 +107,7 @@ const EventDetails = ({ events }: IEvents) => {
           ></iframe>
         </AspectRatio> */}
         <StyledBox>
-          <Flex direction="column" bgColor="primaryNeon" paddingLeft={2}>
+          <Flex direction="column" bgColor="primaryRed" padding={4} gap={4}>
             {events.map((event: any) => (
               <EventCard
                 title={event.fields["Event Title"]}

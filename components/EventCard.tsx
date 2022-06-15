@@ -12,6 +12,8 @@ const EventCard = ({ title, description, startTime, endTime }: IEvent) => {
   return (
     <Flex direction="row" bgColor="primaryNeon">
       <Flex
+        paddingY={4}
+        paddingLeft={4}
         flexBasis="40%"
         flexDirection="column"
         justifyContent="center"
