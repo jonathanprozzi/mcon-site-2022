@@ -6,9 +6,6 @@ import {
   Input,
   Stack,
   Text,
-  useColorModeValue as mode,
-  UnorderedList,
-  ListItem,
   FormErrorMessage,
   FormLabel,
   FormControl,
@@ -16,7 +13,11 @@ import {
 } from "@chakra-ui/react";
 import { useForm } from "react-hook-form";
 
-const EventSubmissionForm = ({ onClose }) => {
+interface EventSubmissionFormProps {
+  onClose: () => void;
+}
+
+const EventSubmissionForm = ({ onClose }: EventSubmissionFormProps) => {
   const [isSending, setSending] = useState(false);
   const toast = useToast();
 

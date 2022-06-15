@@ -34,7 +34,7 @@ const EventDetails = ({ events }: IEvents) => {
           color="black"
         >
           Here is the MCON 2022 Events Calendar. Check back for updates. If
-          you're signed in to your Google account, you can click the Add
+          you&apos;re signed in to your Google account, you can click the Add
           Calendar button to add the events schedule.{" "}
         </Text>
 

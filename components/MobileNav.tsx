@@ -1,13 +1,13 @@
-import { CloseButton, Flex, useColorModeValue } from "@chakra-ui/react";
+import { CloseButton, Flex } from "@chakra-ui/react";
 import { AnimatePresence, motion } from "framer-motion";
 
-interface Props {
+interface MobileNavProps {
   isOpen?: boolean;
   onClose?: () => void;
+  children?: React.ReactNode;
 }
 
-const MobileNav: React.FC<Props> = props => {
-  const { isOpen, onClose, children } = props;
+const MobileNav = ({ isOpen, onClose, children }: MobileNavProps) => {
   return (
     <AnimatePresence>
       {isOpen && (

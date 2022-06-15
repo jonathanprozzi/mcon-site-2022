@@ -41,20 +41,19 @@ const Navbar: React.FC = () => {
         paddingX={[7, 4, 6, 8]}
       >
         <Link href="/" passHref>
-          <a>
-            {/* <VisuallyHidden> */}
+          <ChakraLink textDecoration="none">
             <Heading
               as="h1"
               fontFamily="Basteleur"
               fontSize="2xl"
               fontWeight="bold"
               color="primaryNeon"
+              textDecoration="none"
             >
               MCON 2
             </Heading>
-            {/* </VisuallyHidden> */}
-            {/* <Logo /> */}
-          </a>
+          </ChakraLink>
+          {/* </VisuallyHidden> */}
         </Link>
         <IconButton
           display={{ base: "flex", md: "none" }}
