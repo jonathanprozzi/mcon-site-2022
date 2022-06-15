@@ -1,3 +1,4 @@
+import { useRouter } from "next/router";
 import Head from "next/head";
 import { AppProps } from "next/app";
 import { DefaultSeo } from "next-seo";
@@ -7,6 +8,8 @@ import theme from "../theme";
 import Fonts from "../components/Fonts";
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
+  const router = useRouter();
+  console.log("path", router.asPath);
   return (
     <ChakraProvider theme={theme}>
       <Head>
@@ -48,9 +51,13 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
         }}
       />
       <Fonts />
-      <SiteLayout>
+      {router.asPath !== "/invitation" ? (
+        <SiteLayout>
+          <Component {...pageProps} />
+        </SiteLayout>
+      ) : (
         <Component {...pageProps} />
-      </SiteLayout>
+      )}
     </ChakraProvider>
   );
 };
