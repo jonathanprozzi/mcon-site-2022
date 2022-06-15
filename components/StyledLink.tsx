@@ -10,21 +10,22 @@ const StyledLink = ({
   text,
   fontSize = "xl",
   color = "primaryNeon"
-}: StyledLinkProps) => (
-  <ChakraLink textDecoration="none" marginRight={4}>
-    <Text
-      fontFamily="Dagheest"
-      fontSize={fontSize}
-      textTransform="uppercase"
-      color={color}
-      transition="all ease-in-out .25s"
-      _hover={{
-        color: "black"
-      }}
-    >
-      {text}
-    </Text>
-  </ChakraLink>
-);
-
+}: StyledLinkProps) => {
+  return (
+    <ChakraLink textDecoration="none" marginRight={4}>
+      <Text
+        fontFamily="Dagheest"
+        fontSize={fontSize}
+        textTransform="uppercase"
+        color={color}
+        transition="all ease-in-out .25s"
+        _hover={{
+          color: "black"
+        }}
+      >
+        {text}
+      </Text>
+    </ChakraLink>
+  );
+};
 export default StyledLink;

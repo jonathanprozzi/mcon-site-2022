@@ -9,7 +9,6 @@ import {
 } from "@chakra-ui/react";
 
 export interface ModalWrapperProps extends BoxProps {
-  name: string; // name of the modal for use throughout app
   title: string;
   content: React.ReactNode;
   titleColor?: string;
@@ -20,7 +19,6 @@ export interface ModalWrapperProps extends BoxProps {
 }
 
 const ModalWrapper: React.FC<ModalWrapperProps> = ({
-  name,
   title,
   content,
   size,

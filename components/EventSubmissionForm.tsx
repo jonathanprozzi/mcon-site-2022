@@ -53,12 +53,11 @@ const EventSubmissionForm = ({ onClose }) => {
         status: "success",
         duration: 3000,
         isClosable: true
-      }),
-        setSending(false);
+      });
+      setSending(false);
       onClose();
     }
   }
-}
 
   return (
     <Box as="section">
@@ -77,7 +76,9 @@ const EventSubmissionForm = ({ onClose }) => {
           </Text>
           <Heading mt="4" fontWeight="extrabold" />
           <Box marginY="6">
-        MCON 2022 will have side events for participants to join. If you're interested in submitting a side event for consideration, fill out this form.
+            MCON 2022 will have side events for participants to join. If you're
+            interested in submitting a side event for consideration, fill out
+            this form.
             <form onSubmit={handleSubmit(onSubmit)}>
               <Stack marginTop={6}>
                 <FormControl isInvalid={errors.name}>
