@@ -169,6 +169,28 @@ const Hero = ({ heroHeight = "100vh" }: HeroProps) => {
                 Twitter
               </ChakraLink>
             </Heading>
+            <Text
+              textAlign="center"
+              color="black"
+              fontFamily="Basteleur"
+              fontSize="24px"
+              lineHeight={{ base: 9 }}
+              letterSpacing="tighter"
+              fontWeight="bold"
+              maxWidth="30ch"
+              marginX="auto"
+              paddingBottom={4}
+            >
+              Check out the{" "}
+              <ChakraLink
+                color="primaryNeon"
+                fontSize="24px"
+                isExternal
+                href="https://2021.mcon.fun"
+              >
+                2021 MCON Site
+              </ChakraLink>
+            </Text>
           </Flex>
         </Flex>
       </Flex>
