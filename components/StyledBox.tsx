@@ -10,9 +10,9 @@ interface StyledBoxProps {
 const StyledBox = ({ title, showIcon = false, children }: StyledBoxProps) => (
   <Flex
     direction="column"
-    borderTop="2px solid black"
-    borderX="2px solid black"
-    borderBottom="2px solid black"
+    borderTop="4px solid black"
+    borderX="4px solid black"
+    borderBottom="4px solid black"
     position="relative"
   >
     <Flex
@@ -22,7 +22,7 @@ const StyledBox = ({ title, showIcon = false, children }: StyledBoxProps) => (
       justifyContent="space-between"
       alignItems="center"
       width="100%"
-      borderBottom="2px solid black"
+      borderBottom="4px solid black"
     >
       {title && (
         <Text
