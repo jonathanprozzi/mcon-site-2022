@@ -8,8 +8,9 @@ import {
   Link as ChakraLink,
   useDisclosure
 } from "@chakra-ui/react";
-import ModalWrapper from "./ModalWrapper";
-import EventSubmissionForm from "./EventSubmissionForm";
+import StyledBox from "components/StyledBox";
+import ModalWrapper from "components/ModalWrapper";
+import EventSubmissionForm from "components/EventSubmissionForm";
 
 interface HeroProps {
   heroHeight?: string;
@@ -25,9 +26,7 @@ const Hero = ({ heroHeight = "100vh" }: HeroProps) => {
         direction="column"
         justifyContent="center"
         alignItems="center"
-        // minWidth="100vw"
-        // height={{ base: "50vh", md: "70vh" }}
-        paddingTop={{ base: "0", md: "5vh" }}
+        paddingTop={{ base: "0", md: "5rem" }}
       >
         <VisuallyHidden>
           <Heading as="h1">MCON Denver 2022</Heading>
@@ -37,45 +36,55 @@ const Hero = ({ heroHeight = "100vh" }: HeroProps) => {
           alignItems="center"
           paddingBottom={{ base: 0, md: 10 }}
         >
-          <Heading
-            as="h2"
-            fontFamily="Basteleur"
-            fontSize="80px"
-            fontWeight="bold"
-            color="black"
-          >
-            MCON 2
-          </Heading>
-          <Flex direction={{ base: "column" }} alignItems="center">
-            <Text
-              as="span"
-              fontFamily="Basteleur"
-              color="black"
-              fontSize="36px"
-              lineHeight={[6, 6, 9, 9]}
-              letterSpacing="tighter"
-              fontWeight="normal"
-              maxWidth="30ch"
+          <StyledBox showIcon>
+            <Flex
+              bgColor="white"
+              flexDirection="column"
+              justifyContent="center"
+              alignItems="center"
+              padding={8}
             >
-              One for the DAO purists
-            </Text>
+              <Heading
+                as="h2"
+                fontFamily="Basteleur"
+                fontSize="80px"
+                fontWeight="bold"
+                color="black"
+              >
+                MCON 2
+              </Heading>
+              <Flex direction={{ base: "column" }} alignItems="center">
+                <Text
+                  as="span"
+                  fontFamily="Basteleur"
+                  color="black"
+                  fontSize="36px"
+                  lineHeight={[6, 6, 9, 9]}
+                  letterSpacing="tighter"
+                  fontWeight="normal"
+                  maxWidth="30ch"
+                >
+                  One for the DAO purists
+                </Text>
 
-            <Text
-              as="span"
-              fontFamily="Basteleur"
-              fontSize="36px"
-              lineHeight={{ base: 9 }}
-              letterSpacing="tighter"
-              fontWeight="bold"
-              maxWidth="30ch"
-              marginTop={{ base: "5", md: "5" }}
-              paddingY={{ base: "5", md: "0" }}
-              flexWrap="wrap"
-              color="black"
-            >
-              September 6 - 9th, 2022 Denver, Colorado
-            </Text>
-          </Flex>
+                <Text
+                  as="span"
+                  fontFamily="Basteleur"
+                  fontSize="36px"
+                  lineHeight={{ base: 9 }}
+                  letterSpacing="tighter"
+                  fontWeight="bold"
+                  maxWidth="30ch"
+                  marginTop={{ base: "5", md: "5" }}
+                  paddingY={{ base: "5", md: "0" }}
+                  flexWrap="wrap"
+                  color="black"
+                >
+                  September 6 - 9th, 2022 Denver, Colorado
+                </Text>
+              </Flex>
+            </Flex>
+          </StyledBox>
           <Flex
             direction={{ base: "column" }}
             alignItems="center"

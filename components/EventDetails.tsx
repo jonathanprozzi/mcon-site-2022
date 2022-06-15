@@ -29,7 +29,6 @@ const EventDetails = ({ events }: IEvents) => {
           as="span"
           fontFamily="Dagheest"
           fontSize="md"
-          // fontSize={["lg", "lg", "4xl", "4xl"]}
           lineHeight={[6, 6, 6, 6]}
           letterSpacing="widest"
           color="black"
@@ -48,7 +47,7 @@ const EventDetails = ({ events }: IEvents) => {
         >
           <ChakraLink
             isExternal
-            href="https://calendar.google.com/calendar/u/5?cid=Y19hZzZhc21jczJ2ZGlpMGFrc3RxdGsyOTBsa0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t"
+            // href="https://calendar.google.com/calendar/u/5?cid=Y19hZzZhc21jczJ2ZGlpMGFrc3RxdGsyOTBsa0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t"
             _hover={{
               textDecoration: "none"
             }}
@@ -106,7 +105,7 @@ const EventDetails = ({ events }: IEvents) => {
             allowfullscreen
           ></iframe>
         </AspectRatio> */}
-        <StyledBox>
+        <StyledBox title="SCHEDULE.txt" showIcon={false}>
           <Flex direction="column" bgColor="primaryRed" padding={4} gap={4}>
             {events.map((event: any) => (
               <EventCard
