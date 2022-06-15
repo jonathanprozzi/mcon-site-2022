@@ -17,7 +17,7 @@ const fetcher = async (url: string) => {
   return data;
 };
 
-export default function Events() {
+export default function Details() {
   const { data, error } = useSWR(`/api/get-events`, fetcher, {});
   if (error) {
     return (

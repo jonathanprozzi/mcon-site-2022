@@ -73,79 +73,10 @@ const Navbar: React.FC = () => {
               justifyContent="center"
               fontFamily="Basteleur"
             >
-              <Link href="/#about" passHref>
-                <StyledLink text="About" />
-              </Link>
-              <Link href="/details" passHref>
-                <ChakraLink marginRight={4}>
-                  <Text
-                    fontSize="2xl"
-                    color="brand.white"
-                    transition="all ease-in-out .25s"
-                    textDecoration="none"
-                    _hover={{
-                      color: "brand.pink"
-                    }}
-                  >
-                    Details
-                  </Text>
-                </ChakraLink>
-              </Link>
-              <Link href="/#sponsors" passHref>
-                <ChakraLink marginRight={4}>
-                  <Text
-                    fontSize="2xl"
-                    color="brand.white"
-                    transition="all ease-in-out .25s"
-                    textDecoration="none"
-                    _hover={{
-                      color: "brand.pink"
-                    }}
-                  >
-                    Sponsors
-                  </Text>
-                </ChakraLink>
-              </Link>
-              <Link href="/#speakers" passHref>
-                <ChakraLink
-                  // display={["none", "none", "inline-flex", "inline-flex"]}
-                  marginRight={4}
-                >
-                  <Text
-                    fontSize="2xl"
-                    color="brand.white"
-                    transition="all ease-in-out .25s"
-                    textDecoration="none"
-                    _hover={{
-                      color: "brand.pink"
-                    }}
-                  >
-                    Speakers
-                  </Text>
-                </ChakraLink>
-              </Link>
-
-              <ChakraLink
-                isExternal
-                href="https://form.typeform.com/to/b7yXTDNP"
-              >
-                <Box
-                  fontSize="2xl"
-                  marginTop={4}
-                  paddingY={4}
-                  paddingX={4}
-                  // variant='solid'
-                  width="100%"
-                  transition="all ease-in-out .25s"
-                  bgGradient="linear(to-r,#FF74F2, #74EEFF)"
-                  _hover={{
-                    bgGradient: "linear(to-r, #74EEFF, #FF74F2)"
-                  }}
-                  color="black"
-                >
-                  Tickets
-                </Box>
-              </ChakraLink>
+              <StyledLink href="/#about" text="About" />
+              <StyledLink href="/details" text="Details" />
+              <StyledLink href="/#speakers" text="Speakers" />
+              <StyledLink href="/#sponsors" text="Sponsors" />
             </Box>
           </Stack>
         </MobileNav>
@@ -157,18 +88,10 @@ const Navbar: React.FC = () => {
           paddingRight={16}
           fontFamily="DisposableDroidBB"
         >
-          <Link href="/#about" passHref>
-            <StyledLink text="About" />
-          </Link>
-          <Link href="/#about" passHref>
-            <StyledLink text="Details" />
-          </Link>
-          <Link href="/#speakers" passHref>
-            <StyledLink text="Speakers" />
-          </Link>
-          <Link href="/#sponsors" passHref>
-            <StyledLink text="Sponsors" />
-          </Link>
+          <StyledLink href="/#about" text="About" />
+          <StyledLink href="/details" text="Details" />
+          <StyledLink href="/#speakers" text="Speakers" />
+          <StyledLink href="/#sponsors" text="Sponsors" />
           <ChakraLink
             _hover={{
               textDecoration: "none"

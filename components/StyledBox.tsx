@@ -3,19 +3,22 @@ import { HiX } from "react-icons/hi";
 
 interface StyledBoxProps {
   children: React.ReactNode;
+  href: string;
 }
 
-const StyledBox = ({ children }: StyledBoxProps) => (
+const StyledBox = ({ children, href }: StyledBoxProps) => (
   <Flex
     direction="column"
     borderTop="2px solid black"
     borderX="2px solid black"
     borderBottom="2px solid black"
+    position="relative"
   >
     <Flex
       direction="row"
       bgColor="white"
-      justifyContent="space-between"
+      padding={0}
+      justifyContent="flex-end"
       width="100%"
       borderBottom="2px solid black"
     >
@@ -24,6 +27,7 @@ const StyledBox = ({ children }: StyledBoxProps) => (
         color="black"
         alignSelf="flex-end"
         icon={<HiX />}
+        padding={0}
       />
     </Flex>
     <Box borderBottom="2px solid black" boxShadow="-20px 10px 0px 10px black">
