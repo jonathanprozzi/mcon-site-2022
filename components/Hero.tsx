@@ -134,7 +134,7 @@ const Hero = ({ heroHeight = "100vh" }: HeroProps) => {
             <Heading
               as="span"
               textAlign="center"
-              color="white"
+              color="black"
               fontFamily="Basteleur"
               fontSize="36px"
               lineHeight={{ base: 9 }}

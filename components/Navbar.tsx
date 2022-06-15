@@ -169,24 +169,32 @@ const Navbar: React.FC = () => {
           <Link href="/#sponsors" passHref>
             <StyledLink text="Sponsors" />
           </Link>
-          <Button
-            borderRadius="none"
-            paddingY={2}
-            paddingX={2}
-            transition="all ease-in-out .25s"
-            color="primaryRed"
-            bgColor="primaryNeon"
-            fontFamily="Dagheest"
-            border="2px solid"
+          <ChakraLink
             _hover={{
-              bgColor: "black",
-              color: "primaryNeon",
-              border: "2px solid",
-              borderColor: "primaryNeon"
+              textDecoration: "none"
             }}
+            isExternal
+            href="https://metacartel.typeform.com/to/yiLK5My5"
           >
-            Apply to Attend
-          </Button>
+            <Button
+              borderRadius="none"
+              paddingY={2}
+              paddingX={2}
+              transition="all ease-in-out .25s"
+              color="primaryRed"
+              bgColor="primaryNeon"
+              fontFamily="Dagheest"
+              border="2px solid"
+              _hover={{
+                bgColor: "black",
+                color: "primaryNeon",
+                border: "2px solid",
+                borderColor: "primaryNeon"
+              }}
+            >
+              Apply to Attend
+            </Button>
+          </ChakraLink>
         </Flex>
       </Flex>
     </Flex>

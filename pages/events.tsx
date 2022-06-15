@@ -1,4 +1,6 @@
-import { Flex, Alert, Spinner, Text, Box } from "@chakra-ui/react";
+import { Flex, Heading, Alert, Spinner, Text, Box } from "@chakra-ui/react";
+import EventDetails from "components/EventDetails";
+import StyledBox from "components/StyledBox";
 import useSWR from "swr";
 
 const fetcher = async (url: string) => {
@@ -74,21 +76,45 @@ export default function Events() {
   console.log("data", data);
 
   return (
-    <Flex
-      as="section"
-      direction="column"
-      alignItems="center"
-      justifyContent="center"
-      maxWidth={{ base: "xl", md: "7xl" }}
-      marginX="auto"
-    >
-      <Box paddingTop={{ base: 0, md: 4 }}>
-        <Flex direction="column" justifyContent="center" alignItems="center">
-          {data.map((event: any) => (
-            <Text color="black">{event.fields["Event Title"]}</Text>
-          ))}
-        </Flex>
+    <Box as="section" minWidth="100vw" minHeight="100vh">
+      <Box
+        maxW={{ base: "xl", md: "7xl" }}
+        marginX={{ base: "auto", md: "auto" }}
+        paddingX={{ base: "4", md: "10" }}
+        paddingTop={20}
+        paddingBottom={20}
+      >
+        <Box
+          maxW={{ base: "xl", md: "7xl" }}
+          marginTop={20}
+          mx="auto"
+          px={{ base: "6", md: "8" }}
+        >
+          <Heading
+            as="h2"
+            textAlign="center"
+            color="black"
+            fontFamily="Basteleur"
+            fontWeight="bold"
+            marginX="auto"
+          >
+            Event Details
+          </Heading>
+          <EventDetails />
+          <StyledBox>
+            <Flex
+              direction="column"
+              justifyContent="center"
+              alignItems="center"
+              bgColor="primaryNeon"
+            >
+              {data.map((event: any) => (
+                <Text color="black">{event.fields["Event Title"]}</Text>
+              ))}
+            </Flex>
+          </StyledBox>
+        </Box>
       </Box>
-    </Flex>
+    </Box>
   );
 }
