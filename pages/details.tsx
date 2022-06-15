@@ -100,19 +100,7 @@ export default function Details() {
           >
             Event Details
           </Heading>
-          <EventDetails />
-          <StyledBox>
-            <Flex
-              direction="column"
-              justifyContent="center"
-              alignItems="center"
-              bgColor="primaryNeon"
-            >
-              {data.map((event: any) => (
-                <Text color="black">{event.fields["Event Title"]}</Text>
-              ))}
-            </Flex>
-          </StyledBox>
+          <EventDetails events={data} />
         </Box>
       </Box>
     </Box>

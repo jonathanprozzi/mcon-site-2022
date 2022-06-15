@@ -3,10 +3,9 @@ import { HiX } from "react-icons/hi";
 
 interface StyledBoxProps {
   children: React.ReactNode;
-  href: string;
 }
 
-const StyledBox = ({ children, href }: StyledBoxProps) => (
+const StyledBox = ({ children }: StyledBoxProps) => (
   <Flex
     direction="column"
     borderTop="2px solid black"

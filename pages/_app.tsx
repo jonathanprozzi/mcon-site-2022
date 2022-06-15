@@ -9,7 +9,6 @@ import Fonts from "../components/Fonts";
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
   const router = useRouter();
-  console.log("path", router.asPath);
   return (
     <ChakraProvider theme={theme}>
       <Head>
