@@ -7,14 +7,9 @@ const config = {
 
 const theme = extendTheme({
   config,
-  //   fonts: {
-  //     heading: "",
-  //     body: "",
-  //     mono: "Menlo, monospace",
-  //   },
   colors: {
-    primaryRed: "#FD0A44",
-    primaryNeon: "#8BFF2A"
+    primaryRed: "#FD0943",
+    primaryNeon: "#8AFF2A"
   }
 });
 

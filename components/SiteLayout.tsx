@@ -1,5 +1,7 @@
 import { Flex } from "@chakra-ui/react";
-import Navbar from "./Navbar";
+import Navbar from "components/Navbar";
+// import SocialSection from "components/SocialSection";
+import Footer from "components/Footer";
 
 interface SiteLayoutProps {
   children: React.ReactChild;
@@ -27,7 +29,8 @@ const SiteLayout = ({ children, minHeight = "100vh" }: SiteLayoutProps) => {
       >
         {children}
       </Flex>
-      {/* <Footer /> // can add a Footer if you have one */}
+      {/* <SocialSection /> */}
+      <Footer />
     </Flex>
   );
 };
