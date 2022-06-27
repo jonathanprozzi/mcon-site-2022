@@ -14,7 +14,7 @@ const SiteLayout = ({ children, minHeight = "100vh" }: SiteLayoutProps) => {
       direction="column"
       overflowX="hidden"
       margin="0 auto"
-      // paddingY={{ base: 10, lg: 0 }}
+      paddingY={{ base: "10vh", lg: 0 }}
       minHeight={minHeight || "100vh"}
       minWidth="100vw"
       position="relative"
