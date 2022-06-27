@@ -39,8 +39,8 @@ export const Collabland = () => (
       height={200}
       objectFit="contain"
       placeholder="blur"
-      blurDataURL="/Collab.Land_Large.png"
-      src="/Collab.Land_Large.png"
+      blurDataURL="/CollabLandWhiteLogoSVG.svg"
+      src="/CollabLandWhiteLogoSVG.svg"
     />
   </Box>
 );

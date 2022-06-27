@@ -31,7 +31,6 @@ const Hero = ({ heroHeight = "100vh" }: HeroProps) => {
         justifyContent="center"
         alignItems="center"
         paddingTop={{ base: "0", md: "5rem" }}
-        marginTop="10vh"
         maxWidth="2xl"
       >
         <VisuallyHidden>
