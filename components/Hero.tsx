@@ -13,6 +13,7 @@ import StyledBox from "components/StyledBox";
 import ModalWrapper from "components/ModalWrapper";
 import EventSubmissionForm from "components/EventSubmissionForm";
 import SpeakersGrid from "components/SpeakersGrid";
+import SponsorsGrid from "./SponsorsGrid";
 
 interface HeroProps {
   heroHeight?: string;
@@ -115,10 +116,11 @@ const Hero = ({ heroHeight = "100vh" }: HeroProps) => {
             </StyledBox>
             <StyledBox title="sponsors" collapsed>
               <Flex bgColor="white" paddingX={8} paddingY={4}>
-                <Text color="black" fontFamily="Dagheest" fontSize="xl">
+                {/* <Text color="black" fontFamily="Dagheest" fontSize="xl">
                   Bring the Meta Network together for a rare Cryptopalooza of
                   fun, learning, and experimental growth in every direction.
-                </Text>
+                </Text> */}
+                <SponsorsGrid />
               </Flex>
             </StyledBox>
             <StyledBox title="apply to attend" collapsed>
