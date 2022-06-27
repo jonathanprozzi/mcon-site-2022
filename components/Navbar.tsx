@@ -69,7 +69,11 @@ const Navbar: React.FC = () => {
               <StyledLink href="/details" text="Details" />
               <StyledLink href="/#speakers" text="Speakers" />
               <StyledLink href="/#sponsors" text="Sponsors" />
-              <StyledLink href="/#sponsors" text="Apply" />
+              <StyledLink
+                href="https://metacartel.typeform.com/to/yiLK5My5"
+                text="Apply"
+                isExternal
+              />
 
               <Link href="/" passHref>
                 <ChakraLink textDecoration="none">

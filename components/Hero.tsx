@@ -6,7 +6,8 @@ import {
   Text,
   Button,
   Link as ChakraLink,
-  useDisclosure
+  useDisclosure,
+  SimpleGrid
 } from "@chakra-ui/react";
 import StyledBox from "components/StyledBox";
 import ModalWrapper from "components/ModalWrapper";
@@ -61,12 +62,11 @@ const Hero = ({ heroHeight = "100vh" }: HeroProps) => {
               direction={{ base: "column" }}
               fontFamily="Dagheest-Gothic"
               fontSize={{ base: "20px", lg: "36px" }}
-              // lineHeight={{ base: 9 }}
               letterSpacing="tighter"
               fontWeight="bold"
               color="black"
             >
-              <Text as="span">One for the DAO purists</Text>
+              <Text as="span">Get Your Spicy DAO Fix</Text>
 
               <Text
                 as="span"
@@ -79,14 +79,22 @@ const Hero = ({ heroHeight = "100vh" }: HeroProps) => {
             </Flex>
           </Flex>
           <Flex direction={{ base: "column" }} marginX={8} gap={8}>
+            {/* <SimpleGrid
+            columns={{ base: 1, md: 2, lg: 3 }}
+            spacing={{ base: "4", md: "12", lg: "16" }}
+            margin={12}
+            alignItems="flex-start"
+            justifyItems="center"
+          > */}
             <StyledBox title="mcon.gif" showIcon>
               <Image src="/mcon2.gif" width={350} height={350} />
             </StyledBox>
             <StyledBox title="about" id="about">
               <Flex bgColor="white" paddingX={4} paddingY={4}>
                 <Text color="black" fontFamily="Dagheest" fontSize="xl">
-                  Bring the Meta Network together for a rare Cryptopalooza of
-                  fun, learning, and experimental growth in every direction.
+                  Bringing together a limited number of attendees, MCON gives
+                  you an experience of valuable conversations, learnings and
+                  experimental growth all about DAOs.
                 </Text>
               </Flex>
             </StyledBox>

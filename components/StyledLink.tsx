@@ -6,17 +6,21 @@ interface StyledLinkProps {
   text: string;
   fontSize?: string;
   color?: string;
+  hoverColor?: string;
+  isExternal?: boolean;
 }
 
 const StyledLink = ({
   href,
   text,
   fontSize = "xl",
-  color = "primaryNeon"
+  color = "primaryNeon",
+  hoverColor = "black",
+  isExternal = false
 }: StyledLinkProps) => {
   return (
     <Link href={href} passHref>
-      <ChakraLink textDecoration="none" marginRight={4}>
+      <ChakraLink textDecoration="none" marginRight={4} isExternal={isExternal}>
         <Text
           fontFamily="Dagheest"
           fontSize={fontSize}
@@ -24,7 +28,7 @@ const StyledLink = ({
           color={color}
           transition="all ease-in-out .25s"
           _hover={{
-            color: "black"
+            color: { hoverColor }
           }}
         >
           {text}
