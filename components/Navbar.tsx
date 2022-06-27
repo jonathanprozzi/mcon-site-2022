@@ -27,7 +27,7 @@ const Navbar: React.FC = () => {
       alignItems="center"
       minWidth="100vw"
       position="fixed"
-      backgroundColor={{ base: "black", lg: "transparent" }}
+      backgroundColor={{ base: "black" }}
       top="0"
       left="0"
       zIndex="1000"
