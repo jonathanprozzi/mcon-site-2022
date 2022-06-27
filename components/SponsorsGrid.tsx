@@ -6,7 +6,7 @@ const SponsorsGrid = () => (
     <SimpleGrid
       columns={{ base: 1, md: 2 }}
       spacing={{ base: "4", md: "12", lg: "16" }}
-      margin={12}
+      marginY={8}
       alignItems="flex-start"
       justifyItems="center"
     >
