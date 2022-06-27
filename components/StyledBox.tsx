@@ -17,7 +17,9 @@ const StyledBox = ({
   ...props
 }: StyledBoxProps) => {
   const [collapsedContent, setCollapsedContent] = useState(collapsed);
-  const handleCollapse = () => setCollapsedContent(!collapsedContent);
+  const [hideSelf, setHideSelf] = useState(false);
+  const handleCollapseContent = () => setCollapsedContent(!collapsedContent);
+  const handleHideSelf = () => setHideSelf(!hideSelf);
 
   return (
     <Flex
@@ -27,7 +29,8 @@ const StyledBox = ({
       borderBottom="4px solid black"
       position="relative"
       {...props}
-      onClick={handleCollapse}
+      onClick={handleCollapseContent}
+      display={hideSelf ? "none" : "block"}
     >
       <Flex
         direction="row"
@@ -83,6 +86,7 @@ const StyledBox = ({
             padding={0}
             borderLeft="4px solid black"
             borderRadius="0"
+            onClick={handleHideSelf}
           />
         )}
       </Flex>
