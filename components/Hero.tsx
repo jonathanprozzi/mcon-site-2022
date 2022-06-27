@@ -7,7 +7,7 @@ import {
   Button,
   Link as ChakraLink,
   useDisclosure,
-  SimpleGrid
+  useBreakpointValue
 } from "@chakra-ui/react";
 import StyledBox from "components/StyledBox";
 import ModalWrapper from "components/ModalWrapper";
@@ -20,6 +20,7 @@ interface HeroProps {
 
 const Hero = ({ heroHeight = "100vh" }: HeroProps) => {
   const sideEventForm = useDisclosure();
+  const isMobile = useBreakpointValue({ base: true, lg: false });
 
   return (
     <>
@@ -30,6 +31,7 @@ const Hero = ({ heroHeight = "100vh" }: HeroProps) => {
         alignItems="center"
         paddingTop={{ base: "0", md: "5rem" }}
         marginTop="10vh"
+        maxWidth="2xl"
       >
         <VisuallyHidden>
           <Heading as="h1">MCON Denver 2022</Heading>
@@ -79,15 +81,12 @@ const Hero = ({ heroHeight = "100vh" }: HeroProps) => {
             </Flex>
           </Flex>
           <Flex direction={{ base: "column" }} marginX={8} gap={8}>
-            {/* <SimpleGrid
-            columns={{ base: 1, md: 2, lg: 3 }}
-            spacing={{ base: "4", md: "12", lg: "16" }}
-            margin={12}
-            alignItems="flex-start"
-            justifyItems="center"
-          > */}
             <StyledBox title="mcon.gif" showIcon>
-              <Image src="/mcon2.gif" width={350} height={350} />
+              {isMobile ? (
+                <Image src="/mcon2.gif" width={350} height={350} />
+              ) : (
+                <Image src="/mcon2.gif" width={600} height={600} />
+              )}
             </StyledBox>
             <StyledBox title="about" id="about">
               <Flex bgColor="white" paddingX={4} paddingY={4}>

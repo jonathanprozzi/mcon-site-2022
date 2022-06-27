@@ -4,7 +4,7 @@ import { speakers } from "./_speakersData";
 
 const SpeakersGrid = () => (
   <SimpleGrid
-    columns={{ base: 1, md: 2, lg: 4 }}
+    columns={{ base: 1, md: 2 }}
     spacing={{ base: "4", md: "12", lg: "16" }}
     margin={12}
     alignItems="flex-start"
