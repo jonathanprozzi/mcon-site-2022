@@ -31,7 +31,7 @@ const Hero = ({ heroHeight = "100vh" }: HeroProps) => {
         justifyContent="center"
         alignItems="center"
         paddingTop={{ base: "0", md: "5rem" }}
-        maxWidth="2xl"
+        maxWidth="3xl"
       >
         <VisuallyHidden>
           <Heading as="h1">MCON Denver 2022</Heading>
