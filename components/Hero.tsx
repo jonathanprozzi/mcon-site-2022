@@ -50,16 +50,6 @@ const Hero = ({ heroHeight = "100vh" }: HeroProps) => {
             gap={2}
             marginY={4}
           >
-            {/* <Heading
-              as="h2"
-              fontFamily="Basteleur"
-              fontSize={{ base: "64px", lg: "80px" }}
-              fontWeight="bold"
-              color="black"
-              paddingY={0}
-            >
-              MCON 2
-            </Heading> */}
             <Flex
               direction={{ base: "column" }}
               fontFamily="Dagheest-Gothic"
@@ -98,13 +88,32 @@ const Hero = ({ heroHeight = "100vh" }: HeroProps) => {
               </Flex>
             </StyledBox>
             <StyledBox title="details" collapsed>
-              <Flex bgColor="white" paddingX={8} paddingY={4}>
-                <Text color="black" fontFamily="Dagheest" fontSize="xl">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Molestias error commodi tempora, aut optio minus. Delectus
-                  eligendi quas quod debitis temporibus? Expedita corrupti
-                  voluptatibus exercitationem rerum possimus aut tempore
-                  eveniet!
+              <Flex
+                direction="column"
+                bgColor="white"
+                paddingX={8}
+                paddingY={4}
+                color="black"
+                fontFamily="Dagheest"
+                fontSize="xl"
+              >
+                <Text>
+                  Join the Meta Network as we head to DAOSchool, This year MCON
+                  takes over a boutique high school campus in downtown denver
+                  &quot;Evan School&quot; on Acoma.
+                </Text>
+                <br />
+                <Text>
+                  If you&apos;ve only ever dreamed of drinking tequila in
+                  between classes we&apos;re here to make it a reality.
+                </Text>
+                <br />
+                <Text>
+                  With 6 classrooms of experiences to choose from, a main hall
+                  seating only 200 people you&apos;ll be encouraged to choose
+                  your own adventure while attending different talks and
+                  discussions. Worst comes to worse you can always form a circle
+                  on the lawn.
                 </Text>
               </Flex>
             </StyledBox>
