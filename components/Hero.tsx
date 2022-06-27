@@ -173,43 +173,14 @@ const Hero = ({ heroHeight = "100vh" }: HeroProps) => {
             gap={4}
           >
             <Flex direction={{ base: "column", lg: "row" }} gap={4}>
-              <ChakraLink
-                _hover={{
-                  textDecoration: "none"
-                }}
-                isExternal
-                href="https://yeet.daohaus.club/dao/0x1/0xc0da65b8c37125096e9d54bf02eb4bd8657f66b8/1"
-              >
-                <Button
-                  borderRadius="none"
-                  paddingY={8}
-                  paddingX={8}
-                  fontSize="2xl"
-                  transition="all ease-in-out .25s"
-                  color="primaryRed"
-                  bgColor="primaryNeon"
-                  fontFamily="Dagheest"
-                  border="2px solid"
-                  width="100%"
-                  minWidth="10rem"
-                  _hover={{
-                    bgColor: "black",
-                    color: "primaryNeon",
-                    border: "2px solid",
-                    borderColor: "primaryNeon"
-                  }}
-                >
-                  Fund MCON
-                </Button>
-              </ChakraLink>
               <Button
                 borderRadius="none"
                 paddingY={8}
                 paddingX={8}
                 fontSize="2xl"
                 transition="all ease-in-out .25s"
-                color="primaryNeon"
-                bgColor="primaryRed"
+                color="primaryRed"
+                bgColor="primaryNeon"
                 fontFamily="Dagheest"
                 border="2px solid"
                 width="100%"
