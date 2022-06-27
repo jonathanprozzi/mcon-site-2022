@@ -31,9 +31,9 @@ const StyledBox = ({
       borderX="4px solid black"
       borderBottom="4px solid black"
       position="relative"
+      display={hideSelf ? "none" : "block"}
       {...props}
       onClick={handleCollapseContent}
-      display={hideSelf ? "none" : "block"}
     >
       <Flex
         direction="row"
@@ -60,7 +60,7 @@ const StyledBox = ({
                   color="black"
                   fontFamily="Dagheest-Italic"
                   fontStyle="italic"
-                  paddingLeft={4}
+                  paddingX={6}
                   paddingY={1}
                   width="100%"
                 >
