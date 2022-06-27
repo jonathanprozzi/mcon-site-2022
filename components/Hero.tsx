@@ -66,7 +66,7 @@ const Hero = ({ heroHeight = "100vh" }: HeroProps) => {
                 fontSize={{ base: "16px", lg: "30px" }}
                 color="black"
               >
-                September 6 - 9th, 2022 Denver, CO
+                September 6 - 9th, 2022 Denver, C.O.
               </Text>
             </Flex>
           </Flex>
