@@ -42,11 +42,28 @@ const Navbar: React.FC = () => {
         width={["100vw", "100vw", "100vw", "100vw"]}
         paddingX={[7, 4, 6, 8]}
       >
-        <Link href="/" passHref>
-          <ChakraLink textDecoration="none">
-            <Logo />
-          </ChakraLink>
-        </Link>
+        <Flex direction="row" alignItems="center" justifyContent="center">
+          <Link href="/" passHref>
+            <ChakraLink textDecoration="none">
+              <Logo />
+            </ChakraLink>
+          </Link>
+          <Link href="/" passHref>
+            <ChakraLink textDecoration="none">
+              <Heading
+                as="h2"
+                fontFamily="Basteleur"
+                fontSize={{ base: "24px", lg: "36px" }}
+                fontWeight="bold"
+                color="primaryRed"
+                paddingY={0}
+                paddingLeft={4}
+              >
+                MCON 2
+              </Heading>
+            </ChakraLink>
+          </Link>
+        </Flex>
         <IconButton
           display={{ base: "flex", md: "none" }}
           size="md"

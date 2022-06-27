@@ -51,7 +51,7 @@ const Hero = ({ heroHeight = "100vh" }: HeroProps) => {
             gap={2}
             marginY={4}
           >
-            <Heading
+            {/* <Heading
               as="h2"
               fontFamily="Basteleur"
               fontSize={{ base: "64px", lg: "80px" }}
@@ -60,7 +60,7 @@ const Hero = ({ heroHeight = "100vh" }: HeroProps) => {
               paddingY={0}
             >
               MCON 2
-            </Heading>
+            </Heading> */}
             <Flex
               direction={{ base: "column" }}
               fontFamily="Dagheest-Gothic"
