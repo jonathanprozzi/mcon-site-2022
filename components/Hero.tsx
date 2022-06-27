@@ -75,7 +75,7 @@ const Hero = ({ heroHeight = "100vh" }: HeroProps) => {
               {isMobile ? (
                 <Image src="/MCON2.gif" width={350} height={350} />
               ) : (
-                <Image src="/MCON2.gif" width={600} height={600} />
+                <Image src="/MCON2.gif" width={700} height={700} />
               )}
             </StyledBox>
             <StyledBox title="about" id="about">
