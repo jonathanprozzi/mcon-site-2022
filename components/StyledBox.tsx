@@ -72,7 +72,8 @@ const StyledBox = ({
                 color="black"
                 fontFamily="Dagheest-Italic"
                 fontStyle="italic"
-                paddingLeft={4}
+                paddingX={6}
+                paddingY={1}
                 width="100%"
               >
                 {title}
