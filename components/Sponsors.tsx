@@ -28,18 +28,19 @@ export const Collabland = () => (
     position="relative"
     alignItems="center"
     justifyContent="center"
+    backgroundColor="primaryRed"
     width="100%"
     height="100%"
     padding={8}
   >
     <Image
-      alt="Sponsor logo for CabinDAO - a MCON Denver 2022 sponsor"
-      width={400}
-      height={400}
+      alt="Sponsor logo for Collab.Land - a MCON Denver 2022 sponsor"
+      width={200}
+      height={200}
       objectFit="contain"
       placeholder="blur"
-      blurDataURL="/CollabLandLogo.svg"
-      src="/CollabLandLogo.svg"
+      blurDataURL="/Collab.Land_Large.png"
+      src="/Collab.Land_Large.png"
     />
   </Box>
 );
@@ -72,6 +73,9 @@ export const MCV = () => (
     alignItems="center"
     justifyContent="center"
     backgroundColor="primaryRed"
+    width="100%"
+    height="100%"
+    padding={8}
   >
     <Image
       alt="Sponsor logo for MetaCartel Ventures - a MCON Denver 2022 host"
@@ -123,6 +127,20 @@ export const FireEyes = () => (
       placeholder="blur"
       blurDataURL="/FireEyesRedLogo.svg"
       src="/FireEyesRedLogo.svg"
+    />
+  </Box>
+);
+
+export const Snapshot = () => (
+  <Box position="relative" alignItems="center" justifyContent="center">
+    <Image
+      alt="Sponsor logo for Snapshot - a MCON Denver 2022 sponsor"
+      width={400}
+      height={200}
+      objectFit="contain"
+      placeholder="blur"
+      blurDataURL="/snapshotRED_svg.svg"
+      src="/snapshotRED_svg.svg"
     />
   </Box>
 );
