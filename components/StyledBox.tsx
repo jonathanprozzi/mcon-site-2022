@@ -7,6 +7,7 @@ interface StyledBoxProps extends BoxProps {
   showIcon?: boolean;
   children: React.ReactNode;
   collapsed?: boolean;
+  id?: string;
 }
 
 const StyledBox = ({
@@ -14,6 +15,7 @@ const StyledBox = ({
   showIcon = false,
   children,
   collapsed = false,
+  id,
   ...props
 }: StyledBoxProps) => {
   const [collapsedContent, setCollapsedContent] = useState(collapsed);
@@ -23,6 +25,7 @@ const StyledBox = ({
 
   return (
     <Flex
+      id={id}
       direction="column"
       borderTop="4px solid black"
       borderX="4px solid black"

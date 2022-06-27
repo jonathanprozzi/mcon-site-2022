@@ -19,6 +19,8 @@ const MobileNav = ({ isOpen, onClose, children }: MobileNavProps) => {
         >
           <Flex
             direction="column"
+            alignItems="center"
+            justifyContent="space-around"
             width="100%"
             background="black"
             height="100vh"
@@ -27,12 +29,19 @@ const MobileNav = ({ isOpen, onClose, children }: MobileNavProps) => {
             top={0}
             left={0}
             zIndex={20}
-            // paddingX={4}
+            paddingX={4}
             paddingY={4}
             marginBottom={{ base: "10vh", lg: 0 }}
           >
             {children}
-            <CloseButton pos="absolute" top={4} right={4} onClick={onClose} />
+            <CloseButton
+              pos="absolute"
+              top={8}
+              right={10}
+              onClick={onClose}
+              size="md"
+              color="primaryRed"
+            />
           </Flex>
         </motion.div>
       )}

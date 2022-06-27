@@ -5,13 +5,13 @@ import {
   Heading,
   Text,
   Button,
-  AspectRatio,
   Link as ChakraLink,
   useDisclosure
 } from "@chakra-ui/react";
 import StyledBox from "components/StyledBox";
 import ModalWrapper from "components/ModalWrapper";
 import EventSubmissionForm from "components/EventSubmissionForm";
+import SpeakersGrid from "components/SpeakersGrid";
 
 interface HeroProps {
   heroHeight?: string;
@@ -82,7 +82,7 @@ const Hero = ({ heroHeight = "100vh" }: HeroProps) => {
             <StyledBox title="mcon.gif" showIcon>
               <Image src="/mcon2.gif" width={350} height={350} />
             </StyledBox>
-            <StyledBox title="about">
+            <StyledBox title="about" id="about">
               <Flex bgColor="white" paddingX={4} paddingY={4}>
                 <Text color="black" fontFamily="Dagheest" fontSize="xl">
                   Bring the Meta Network together for a rare Cryptopalooza of
@@ -93,17 +93,17 @@ const Hero = ({ heroHeight = "100vh" }: HeroProps) => {
             <StyledBox title="details" collapsed>
               <Flex bgColor="white" paddingX={8} paddingY={4}>
                 <Text color="black" fontFamily="Dagheest" fontSize="xl">
-                  Bring the Meta Network together for a rare Cryptopalooza of
-                  fun, learning, and experimental growth in every direction.
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Molestias error commodi tempora, aut optio minus. Delectus
+                  eligendi quas quod debitis temporibus? Expedita corrupti
+                  voluptatibus exercitationem rerum possimus aut tempore
+                  eveniet!
                 </Text>
               </Flex>
             </StyledBox>
             <StyledBox title="speakers" collapsed>
               <Flex bgColor="white" paddingX={8} paddingY={4}>
-                <Text color="black" fontFamily="Dagheest" fontSize="xl">
-                  Bring the Meta Network together for a rare Cryptopalooza of
-                  fun, learning, and experimental growth in every direction.
-                </Text>
+                <SpeakersGrid />
               </Flex>
             </StyledBox>
             <StyledBox title="sponsors" collapsed>

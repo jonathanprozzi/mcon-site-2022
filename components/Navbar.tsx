@@ -45,18 +45,7 @@ const Navbar: React.FC = () => {
         <Link href="/" passHref>
           <ChakraLink textDecoration="none">
             <Logo />
-            {/* <Heading
-              as="h1"
-              fontFamily="Basteleur"
-              fontSize="2xl"
-              fontWeight="bold"
-              color="primaryNeon"
-              textDecoration="none"
-            >
-              MCON 2
-            </Heading> */}
           </ChakraLink>
-          {/* </VisuallyHidden> */}
         </Link>
         <IconButton
           display={{ base: "flex", md: "none" }}
@@ -69,17 +58,24 @@ const Navbar: React.FC = () => {
           icon={<HiMenuAlt3 />}
         />
         <MobileNav isOpen={mobileNav.isOpen} onClose={mobileNav.onClose}>
-          <Stack spacing={5}>
+          <Stack spacing={5} alignItems="center" justifyContent="center">
             <Box
-              flexDirection="row"
+              flexDirection="column"
               alignItems="center"
               justifyContent="center"
-              fontFamily="Basteleur"
+              fontFamily="Dagheest"
             >
               <StyledLink href="/#about" text="About" />
               <StyledLink href="/details" text="Details" />
               <StyledLink href="/#speakers" text="Speakers" />
               <StyledLink href="/#sponsors" text="Sponsors" />
+              <StyledLink href="/#sponsors" text="Apply" />
+
+              <Link href="/" passHref>
+                <ChakraLink textDecoration="none">
+                  <Logo />
+                </ChakraLink>
+              </Link>
             </Box>
           </Stack>
         </MobileNav>
@@ -89,12 +85,13 @@ const Navbar: React.FC = () => {
           display={{ base: "none", md: "flex" }}
           paddingY={4}
           paddingRight={16}
-          fontFamily="DisposableDroidBB"
+          fontFamily="Basteleur"
         >
           <StyledLink href="/#about" text="About" />
           <StyledLink href="/details" text="Details" />
           <StyledLink href="/#speakers" text="Speakers" />
           <StyledLink href="/#sponsors" text="Sponsors" />
+
           <ChakraLink
             _hover={{
               textDecoration: "none"
