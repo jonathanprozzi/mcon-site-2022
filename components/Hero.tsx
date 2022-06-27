@@ -125,7 +125,7 @@ const Hero = ({ heroHeight = "100vh" }: HeroProps) => {
                 {/* <SpeakersGrid /> */}
               </Flex>
             </StyledBox>
-            <StyledBox title="sponsors" id="sponsors" collapsed>
+            <StyledBox title="sponsors" id="sponsors">
               <Flex bgColor="white" paddingX={8} paddingY={4}>
                 {/* <Text color="black" fontFamily="Dagheest" fontSize="xl">
                   Bring the Meta Network together for a rare Cryptopalooza of

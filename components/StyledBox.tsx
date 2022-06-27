@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Flex, Box, Text, IconButton, BoxProps } from "@chakra-ui/react";
 import { HiX } from "react-icons/hi";
+import { url } from "inspector";
 
 interface StyledBoxProps extends BoxProps {
   title?: string;
@@ -43,6 +44,9 @@ const StyledBox = ({
         width="100%"
         borderBottom="4px solid black"
         onClick={handleCollapseContent}
+        _hover={{
+          cursor: 'url("/Mouse.png"), pointer'
+        }}
       >
         {title && (
           <>
