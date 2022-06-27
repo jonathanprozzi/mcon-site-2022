@@ -14,8 +14,7 @@ const SpeakersGrid = () => (
       <SpeakerCard
         key={speaker.name}
         name={speaker.name}
-        // image={speaker.image}
-        image="/ameen-soleimani.jpg"
+        image={speaker.image}
         organization={speaker.organization}
       />
     ))}
