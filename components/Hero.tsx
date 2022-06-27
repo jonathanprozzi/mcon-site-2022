@@ -87,7 +87,7 @@ const Hero = ({ heroHeight = "100vh" }: HeroProps) => {
                 </Text>
               </Flex>
             </StyledBox>
-            <StyledBox title="details" collapsed>
+            <StyledBox title="details" id="details" collapsed>
               <Flex
                 direction="column"
                 bgColor="white"
@@ -117,7 +117,7 @@ const Hero = ({ heroHeight = "100vh" }: HeroProps) => {
                 </Text>
               </Flex>
             </StyledBox>
-            <StyledBox title="speakers" collapsed>
+            <StyledBox title="speakers" id="speakers" collapsed>
               <Flex bgColor="white" paddingX={8} paddingY={4}>
                 <Text color="black" fontFamily="Dagheest" fontSize="xl">
                   Coming soon!
@@ -125,7 +125,7 @@ const Hero = ({ heroHeight = "100vh" }: HeroProps) => {
                 {/* <SpeakersGrid /> */}
               </Flex>
             </StyledBox>
-            <StyledBox title="sponsors" collapsed>
+            <StyledBox title="sponsors" id="sponsors" collapsed>
               <Flex bgColor="white" paddingX={8} paddingY={4}>
                 {/* <Text color="black" fontFamily="Dagheest" fontSize="xl">
                   Bring the Meta Network together for a rare Cryptopalooza of
