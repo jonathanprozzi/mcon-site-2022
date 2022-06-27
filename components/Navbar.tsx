@@ -95,7 +95,6 @@ const Navbar: React.FC = () => {
           <StyledLink href="/details" text="Details" />
           <StyledLink href="/#speakers" text="Speakers" />
           <StyledLink href="/#sponsors" text="Sponsors" />
-
           <ChakraLink
             _hover={{
               textDecoration: "none"
