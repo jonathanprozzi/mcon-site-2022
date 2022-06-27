@@ -27,11 +27,13 @@ const Navbar: React.FC = () => {
       alignItems="center"
       minWidth="100vw"
       position="fixed"
+      backgroundColor={{ base: "black", lg: "transparent" }}
       top="0"
+      left="0"
       zIndex="1000"
       height="10vh"
-      paddingY={4}
-      paddingX={[2, 2, 8, 8]}
+      paddingTop={{ base: 1 }}
+      paddingX={{ base: 2, lg: 8 }}
     >
       <Flex
         direction="row"
@@ -42,7 +44,8 @@ const Navbar: React.FC = () => {
       >
         <Link href="/" passHref>
           <ChakraLink textDecoration="none">
-            <Heading
+            <Logo />
+            {/* <Heading
               as="h1"
               fontFamily="Basteleur"
               fontSize="2xl"
@@ -51,16 +54,17 @@ const Navbar: React.FC = () => {
               textDecoration="none"
             >
               MCON 2
-            </Heading>
+            </Heading> */}
           </ChakraLink>
           {/* </VisuallyHidden> */}
         </Link>
         <IconButton
           display={{ base: "flex", md: "none" }}
-          size="sm"
+          size="md"
           aria-label="Open menu"
           fontSize="24px"
           variant="ghost"
+          color="primaryRed"
           onClick={mobileNav.onOpen}
           icon={<HiMenuAlt3 />}
         />

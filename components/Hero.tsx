@@ -1,10 +1,11 @@
 import {
   Flex,
-  Box,
+  Image,
   VisuallyHidden,
   Heading,
   Text,
   Button,
+  AspectRatio,
   Link as ChakraLink,
   useDisclosure
 } from "@chakra-ui/react";
@@ -27,6 +28,7 @@ const Hero = ({ heroHeight = "100vh" }: HeroProps) => {
         justifyContent="center"
         alignItems="center"
         paddingTop={{ base: "0", md: "5rem" }}
+        marginTop="10vh"
       >
         <VisuallyHidden>
           <Heading as="h1">MCON Denver 2022</Heading>
@@ -36,55 +38,90 @@ const Hero = ({ heroHeight = "100vh" }: HeroProps) => {
           alignItems="center"
           paddingBottom={{ base: 0, md: 10 }}
         >
-          <StyledBox showIcon>
-            <Flex
-              bgColor="white"
-              flexDirection="column"
-              justifyContent="center"
-              alignItems="center"
-              padding={8}
+          <Flex
+            flexDirection="column"
+            justifyContent="center"
+            alignItems="center"
+          >
+            <Heading
+              as="h2"
+              fontFamily="Basteleur"
+              fontSize={{ base: "64px", lg: "80px" }}
+              fontWeight="bold"
+              color="black"
+              alignSelf="flex-start"
             >
-              <Heading
-                as="h2"
-                fontFamily="Basteleur"
-                fontSize="80px"
-                fontWeight="bold"
+              MCON 2
+            </Heading>
+            <Flex
+              direction={{ base: "column" }}
+              fontFamily="Dagheest-Gothic"
+              fontSize={{ base: "20px", lg: "36px" }}
+              lineHeight={{ base: 9 }}
+              letterSpacing="tighter"
+              fontWeight="bold"
+              color="black"
+            >
+              <Text as="span">One for the DAO purists</Text>
+
+              <Text
+                as="span"
+                fontWeight="regular"
+                fontSize={{ base: "16px", lg: "30px" }}
+                // marginTop={{ base: "5", md: "5" }}
+                // paddingY={{ base: "5", md: "0" }}
+                // flexWrap="wrap"
                 color="black"
               >
-                MCON 2
-              </Heading>
-              <Flex direction={{ base: "column" }} alignItems="center">
-                <Text
-                  as="span"
-                  fontFamily="Basteleur"
-                  color="black"
-                  fontSize="36px"
-                  lineHeight={[6, 6, 9, 9]}
-                  letterSpacing="tighter"
-                  fontWeight="normal"
-                  maxWidth="30ch"
-                >
-                  One for the DAO purists
-                </Text>
-
-                <Text
-                  as="span"
-                  fontFamily="Basteleur"
-                  fontSize="36px"
-                  lineHeight={{ base: 9 }}
-                  letterSpacing="tighter"
-                  fontWeight="bold"
-                  maxWidth="30ch"
-                  marginTop={{ base: "5", md: "5" }}
-                  paddingY={{ base: "5", md: "0" }}
-                  flexWrap="wrap"
-                  color="black"
-                >
-                  September 6 - 9th, 2022 Denver, Colorado
+                September 6 - 9th, 2022 Denver, Colorado
+              </Text>
+            </Flex>
+          </Flex>
+          <Flex direction={{ base: "column" }} marginX={8} gap={8}>
+            <StyledBox title="mcon.gif" showIcon>
+              <Image src="/mcon2.gif" width={350} height={350} />
+            </StyledBox>
+            <StyledBox title="about" collapsed>
+              <Flex bgColor="white" paddingX={8} paddingY={4}>
+                <Text color="black" fontFamily="Dagheest" fontSize="xl">
+                  Bring the Meta Network together for a rare Cryptopalooza of
+                  fun, learning, and experimental growth in every direction.
                 </Text>
               </Flex>
-            </Flex>
-          </StyledBox>
+            </StyledBox>
+            <StyledBox title="details" collapsed>
+              <Flex bgColor="white" paddingX={8} paddingY={4}>
+                <Text color="black" fontFamily="Dagheest" fontSize="xl">
+                  Bring the Meta Network together for a rare Cryptopalooza of
+                  fun, learning, and experimental growth in every direction.
+                </Text>
+              </Flex>
+            </StyledBox>
+            <StyledBox title="speakers" collapsed>
+              <Flex bgColor="white" paddingX={8} paddingY={4}>
+                <Text color="black" fontFamily="Dagheest" fontSize="xl">
+                  Bring the Meta Network together for a rare Cryptopalooza of
+                  fun, learning, and experimental growth in every direction.
+                </Text>
+              </Flex>
+            </StyledBox>
+            <StyledBox title="sponsors" collapsed>
+              <Flex bgColor="white" paddingX={8} paddingY={4}>
+                <Text color="black" fontFamily="Dagheest" fontSize="xl">
+                  Bring the Meta Network together for a rare Cryptopalooza of
+                  fun, learning, and experimental growth in every direction.
+                </Text>
+              </Flex>
+            </StyledBox>
+            <StyledBox title="apply to attend" collapsed>
+              <Flex bgColor="white" paddingX={8} paddingY={4}>
+                <Text color="black" fontFamily="Dagheest" fontSize="xl">
+                  Bring the Meta Network together for a rare Cryptopalooza of
+                  fun, learning, and experimental growth in every direction.
+                </Text>
+              </Flex>
+            </StyledBox>
+          </Flex>
           <Flex
             direction={{ base: "column" }}
             alignItems="center"
@@ -151,7 +188,7 @@ const Hero = ({ heroHeight = "100vh" }: HeroProps) => {
               textAlign="center"
               color="black"
               fontFamily="Basteleur"
-              fontSize="36px"
+              fontSize={{ base: "24px", lg: "36px" }}
               lineHeight={{ base: 9 }}
               letterSpacing="tighter"
               fontWeight="bold"
@@ -173,8 +210,8 @@ const Hero = ({ heroHeight = "100vh" }: HeroProps) => {
               textAlign="center"
               color="black"
               fontFamily="Basteleur"
-              fontSize="24px"
               lineHeight={{ base: 9 }}
+              fontSize={{ base: "20px", lg: "36px" }}
               letterSpacing="tighter"
               fontWeight="bold"
               maxWidth="30ch"
@@ -184,7 +221,6 @@ const Hero = ({ heroHeight = "100vh" }: HeroProps) => {
               Check out the{" "}
               <ChakraLink
                 color="primaryNeon"
-                fontSize="24px"
                 isExternal
                 href="https://2021.mcon.fun"
               >

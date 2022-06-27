@@ -14,6 +14,7 @@ const SiteLayout = ({ children, minHeight = "100vh" }: SiteLayoutProps) => {
       direction="column"
       overflowX="hidden"
       margin="0 auto"
+      // paddingY={{ base: 10, lg: 0 }}
       minHeight={minHeight || "100vh"}
       minWidth="100vw"
       position="relative"
@@ -26,10 +27,10 @@ const SiteLayout = ({ children, minHeight = "100vh" }: SiteLayoutProps) => {
         justify={["flex-start", "flex-start", "center", "center"]}
         flex="1"
         minHeight={["100vh", "100vh", "0", "0"]}
+        marginTop={{ base: "0", lg: 0 }}
       >
         {children}
       </Flex>
-      {/* <SocialSection /> */}
       <Footer />
     </Flex>
   );

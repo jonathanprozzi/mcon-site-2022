@@ -20,7 +20,7 @@ const MobileNav = ({ isOpen, onClose, children }: MobileNavProps) => {
           <Flex
             direction="column"
             width="100%"
-            background="brand.darkblue"
+            background="black"
             height="100vh"
             overflow="auto"
             position="absolute"
@@ -29,6 +29,7 @@ const MobileNav = ({ isOpen, onClose, children }: MobileNavProps) => {
             zIndex={20}
             // paddingX={4}
             paddingY={4}
+            marginBottom={{ base: "10vh", lg: 0 }}
           >
             {children}
             <CloseButton pos="absolute" top={4} right={4} onClick={onClose} />

@@ -15,13 +15,7 @@ const Copyright = ({ content = "MCON" }: CopyrightProps) => (
     paddingBottom={6}
     paddingX={{ base: "6", md: "0" }}
   >
-    <Text
-      color="brand.cyan"
-      as="span"
-      fontSize="lg"
-      fontFamily="Dagheest"
-      letterSpacing="wider"
-    >
+    <Text color="brand.cyan" as="span" fontSize="lg" fontFamily="Dagheest">
       © {new Date().getFullYear()} {content} Built with{" "}
       <Text as="span" role="img" aria-labelledby="chili emoji" fontSize="24px">
         🌶️
@@ -40,7 +34,6 @@ const Copyright = ({ content = "MCON" }: CopyrightProps) => (
           fontFamily="Basteleur"
           fontWeight="light"
           fontSize="lg"
-          lineHeight={[6, 6, 9, 9]}
           letterSpacing="widest"
           color="primaryNeon"
           transition="all ease-in-out .25s"

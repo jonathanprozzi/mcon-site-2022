@@ -34,6 +34,13 @@ const Fonts = () => (
           font-weight: 400;
           font-display: swap;
         }
+        @font-face {
+          font-family: "Dagheest-Italic";
+          src: url("/fonts/Dagheest/FT88-Italic.ttf");
+          font-style: italic;
+          font-weight: 400;
+          font-display: swap;
+        }
     `}
   />
 );
