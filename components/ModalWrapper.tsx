@@ -7,13 +7,12 @@ import {
   ModalCloseButton,
   BoxProps
 } from "@chakra-ui/react";
+import StyledBox from "components/StyledBox";
 
 export interface ModalWrapperProps extends BoxProps {
   title: string;
   content: React.ReactNode;
-  titleColor?: string;
   size?: "sm" | "md" | "lg" | "xl" | "2xl";
-  bgColor?: string;
   isOpen?: boolean;
   onClose?: () => void;
 }
@@ -23,22 +22,21 @@ const ModalWrapper: React.FC<ModalWrapperProps> = ({
   content,
   size,
   isOpen,
-  onClose,
-  ...props
+  onClose
 }: ModalWrapperProps) => {
   return (
-    <Modal isOpen={isOpen} onClose={onClose} size={size || "2xl"}>
+    <Modal isOpen={isOpen} onClose={onClose} size={size || "3xl"}>
       <ModalOverlay />
-      <ModalContent
-        background={props.bgColor ? props.bgColor : "white"}
-        minWidth="20vw"
-        paddingY={8}
-      >
-        <ModalHeader color={props.color ? props.color : "gray.800"}>
+      <ModalContent bgColor="primaryRed" minWidth="20vw" paddingY={8}>
+        <ModalHeader color="primaryNeon" fontFamily="Basteleur">
           {title}
         </ModalHeader>
-        <ModalCloseButton color="gray.800" />
-        <ModalBody>{content}</ModalBody>
+        <ModalCloseButton color="primaryNeon" />
+        <ModalBody bgColor="transparent" marginX={4}>
+          <StyledBox showIcon={false} title="Event Details">
+            {content}
+          </StyledBox>
+        </ModalBody>
       </ModalContent>
     </Modal>
   );

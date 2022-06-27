@@ -27,6 +27,13 @@ const Fonts = () => (
           font-weight: 400;
           font-display: swap;
         }
+        @font-face {
+          font-family: "Dagheest-Gothic";
+          src: url("/fonts/Dagheest/FT88-Gothique.ttf");
+          font-style: regular;
+          font-weight: 400;
+          font-display: swap;
+        }
     `}
   />
 );

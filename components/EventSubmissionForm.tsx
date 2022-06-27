@@ -4,6 +4,7 @@ import {
   Button,
   Heading,
   Input,
+  Textarea,
   Stack,
   Text,
   FormErrorMessage,
@@ -11,7 +12,9 @@ import {
   FormControl,
   useToast
 } from "@chakra-ui/react";
-import { useForm } from "react-hook-form";
+import ReactDatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
+import { useForm, Controller } from "react-hook-form";
 
 interface EventSubmissionFormProps {
   onClose: () => void;
@@ -36,8 +39,8 @@ const EventSubmissionForm = ({ onClose }: EventSubmissionFormProps) => {
         daoName: values.daoName,
         eventTitle: values.daoTitle,
         eventDescription: values.daoDescription,
-        eventStartTime: values.daoStartTime,
-        eventEndTime: values.daoEndTime,
+        eventStartTime: values.eventStartTime,
+        eventEndTime: values.eventEndTime,
         organizerTelegramHandle: values.organizerTelegramHandle,
         otherNotes: values.otherNotes
       }),
@@ -62,32 +65,21 @@ const EventSubmissionForm = ({ onClose }: EventSubmissionFormProps) => {
 
   return (
     <Box as="section">
-      <Box
-        bg="gray.800"
-        shadow="lg"
-        maxW={{ base: "xl", md: "3xl" }}
-        marginX="auto"
-        paddingX={{ base: "6", md: "8" }}
-        paddingY="6"
-        rounded="lg"
-      >
-        <Box maxW="md" marginX="auto">
-          <Text color="brand.blue" fontWeight="bold" letterSpacing="wide">
-            Entry is permissioned upon meeting the following requirements:
-          </Text>
-          <Heading mt="4" fontWeight="extrabold" />
-          <Box marginY="6">
+      <Box bg="primaryRed" marginX="auto">
+        <Box color="primaryRed" fontFamily="Dagheest">
+          <Box bgColor="primaryNeon" padding={6}>
             MCON 2022 will have side events for participants to join. If
             you&apos;re interested in submitting a side event for consideration,
             fill out this form.
             <form onSubmit={handleSubmit(onSubmit)}>
               <Stack marginTop={6}>
                 <FormControl isInvalid={errors.name}>
-                  <FormLabel htmlFor="name">DAO Name</FormLabel>
+                  <FormLabel htmlFor="daoName">DAO Name</FormLabel>
                   <Input
                     id="daoName"
                     aria-label="Enter your DAO's name"
                     placeholder="DAO Name"
+                    variant="filled"
                     {...register("daoName", {
                       required: "DAO name is required",
                       minLength: {
@@ -95,42 +87,108 @@ const EventSubmissionForm = ({ onClose }: EventSubmissionFormProps) => {
                         message: "Minimum length should be 2"
                       }
                     })}
-                    rounded="base"
                   />
                   <FormErrorMessage>
-                    {errors.name && errors.name.message}
+                    {errors.daoName && errors.daoName.message}
                   </FormErrorMessage>
                 </FormControl>
-                <FormControl isInvalid={errors.email}>
-                  <FormLabel htmlFor="email">Email</FormLabel>
+                <FormControl isInvalid={errors.eventTitle}>
+                  <FormLabel htmlFor="eventTitle">Event Title</FormLabel>
                   <Input
-                    id="email"
-                    aria-label="Enter your email"
-                    placeholder="Enter your email to join"
-                    {...register("email", {
-                      required: "Your email is required",
+                    id="eventTitle"
+                    aria-label="Enter your event title"
+                    placeholder="Event title"
+                    variant="filled"
+                    {...register("eventTitle", {
+                      required: "Your event title is required",
                       minLength: {
                         value: 4,
                         message: "Minimum length should be 2"
                       }
                     })}
-                    rounded="base"
                   />
                   <FormErrorMessage>
-                    {errors.email && errors.email.message}
+                    {errors.eventTitle && errors.eventTitle.message}
+                  </FormErrorMessage>
+                </FormControl>
+                <FormControl isInvalid={errors.eventDescription}>
+                  <FormLabel htmlFor="eventDescription">
+                    Event Description
+                  </FormLabel>
+                  <Textarea
+                    id="eventDescription"
+                    aria-label="Enter your event description"
+                    placeholder="Event description"
+                    variant="filled"
+                    {...register("eventDescription", {
+                      required: "Your event description is required",
+                      minLength: {
+                        value: 4,
+                        message: "Minimum length should be 2"
+                      }
+                    })}
+                  />
+                  <FormErrorMessage>
+                    {errors.eventDescription && errors.eventDescription.message}
+                  </FormErrorMessage>
+                </FormControl>
+                <FormControl isInvalid={errors.organizerTelegramHandle}>
+                  <FormLabel htmlFor="organizerTelegramHandle">
+                    Organizer&apos;s Telegram Handle
+                  </FormLabel>
+                  <Input
+                    id="organizerTelegramHandle"
+                    aria-label="Enter the event organizer's Telegram handle"
+                    placeholder="Telegram Handle"
+                    variant="filled"
+                    {...register("organizerTelegramHandle", {
+                      required: "Telegram Handle is required",
+                      minLength: {
+                        value: 4,
+                        message: "Minimum length should be 2"
+                      }
+                    })}
+                  />
+                  <FormErrorMessage>
+                    {errors.organizerTelegramHandle &&
+                      errors.organizerTelegramHandle.message}
+                  </FormErrorMessage>
+                </FormControl>
+                <FormControl isInvalid={errors.otherNotes}>
+                  <FormLabel htmlFor="otherNotes">Other Notes</FormLabel>
+                  <Textarea
+                    id="otherNotes"
+                    aria-label="Enter any other notes"
+                    placeholder="Any other notes"
+                    variant="filled"
+                    {...register("otherNotes")}
+                  />
+                  <FormErrorMessage>
+                    {errors.otherNotes && errors.otherNotes.message}
                   </FormErrorMessage>
                 </FormControl>
                 <Button
                   isLoading={isSubmitting}
                   type="submit"
-                  w="full"
-                  colorScheme="brandGreen"
-                  size="md"
-                  textTransform="uppercase"
-                  fontSize="sm"
-                  fontWeight="bold"
+                  borderRadius="none"
+                  paddingY={2}
+                  paddingX={2}
+                  transition="all ease-in-out .25s"
+                  color="primaryNeon"
+                  bgColor="black"
+                  fontFamily="Dagheest"
+                  border="2px solid"
+                  borderColor="primaryNeon"
+                  width="100%"
+                  minWidth="10rem"
+                  _hover={{
+                    bgColor: "black",
+                    color: "primaryRed",
+                    border: "2px solid",
+                    borderColor: "primaryRed"
+                  }}
                 >
-                  Join now
+                  Submit Event
                 </Button>
               </Stack>
             </form>
