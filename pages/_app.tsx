@@ -14,13 +14,31 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
       <Head>
         <link
           rel="preload"
-          href="/fonts/DisposableDroidBB/DisposableDroidBB_bld.ttf"
+          href="/fonts/Basteleur/Basteleur-Bold.ttf"
           as="font"
           crossOrigin=""
         />
         <link
           rel="preload"
-          href="/fonts/Invasion2000/INVASION2000.TTF"
+          href="/fonts/Basteleur/Basteleur-Moonlight.ttf"
+          as="font"
+          crossOrigin=""
+        />
+        <link
+          rel="preload"
+          href="/fonts/Dagheest/FT88-Gothique.ttf"
+          as="font"
+          crossOrigin=""
+        />
+        <link
+          rel="preload"
+          href="/fonts/Dagheest/FT88-Italic.ttf"
+          as="font"
+          crossOrigin=""
+        />
+        <link
+          rel="preload"
+          href="/fonts/Dagheest/FT88-Regular.ttf"
           as="font"
           crossOrigin=""
         />

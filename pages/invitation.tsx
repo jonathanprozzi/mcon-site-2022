@@ -40,7 +40,7 @@ const Invitation = () => {
             <HStack>
               <Image src="/fire.png" width={100} height={100} />
               <Text>Dear servants of Moloch,</Text>
-              <Image src="/fire.png" width={100} height={100} />
+              <Image src="/fire2.png" width={100} height={100} />
             </HStack>
           ) : (
             <Text>Dear servants of Moloch,</Text>
@@ -130,7 +130,7 @@ const Invitation = () => {
         </VStack>
         {!isMobile && (
           <Flex alignItems="center" justifyContent="center">
-            <Image src="/fire.png" width={100} height={100} />
+            <Image src="/fire2.png" width={100} height={100} />
           </Flex>
         )}
       </Flex>
