@@ -33,7 +33,6 @@ const StyledBox = ({
       position="relative"
       display={hideSelf ? "none" : "block"}
       {...props}
-      onClick={handleCollapseContent}
     >
       <Flex
         direction="row"
@@ -43,6 +42,7 @@ const StyledBox = ({
         alignItems="center"
         width="100%"
         borderBottom="4px solid black"
+        onClick={handleCollapseContent}
       >
         {title && (
           <>
