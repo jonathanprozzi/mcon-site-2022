@@ -44,23 +44,20 @@ const Navbar: React.FC = () => {
       >
         <Flex direction="row" alignItems="center" justifyContent="center">
           <Link href="/" passHref>
-            <ChakraLink textDecoration="none">
-              <Logo />
-            </ChakraLink>
-          </Link>
-          <Link href="/" passHref>
-            <ChakraLink textDecoration="none">
-              <Heading
-                as="h2"
-                fontFamily="Basteleur"
-                fontSize={{ base: "24px", lg: "36px" }}
-                fontWeight="bold"
-                color="primaryRed"
-                paddingY={0}
-                paddingLeft={4}
-              >
-                MCON 2
-              </Heading>
+            <ChakraLink style={{ textDecoration: "none" }}>
+              <Flex gap={2} alignItems="center">
+                <Logo />
+                <Heading
+                  as="h2"
+                  fontFamily="Basteleur"
+                  fontSize={{ base: "24px", lg: "36px" }}
+                  fontWeight="bold"
+                  color="primaryRed"
+                  paddingY={0}
+                >
+                  MCON 2
+                </Heading>
+              </Flex>
             </ChakraLink>
           </Link>
         </Flex>
@@ -93,7 +90,7 @@ const Navbar: React.FC = () => {
               />
 
               <Link href="/" passHref>
-                <ChakraLink textDecoration="none">
+                <ChakraLink style={{ textDecoration: "none" }}>
                   <Logo />
                 </ChakraLink>
               </Link>
