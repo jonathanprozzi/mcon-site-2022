@@ -35,6 +35,7 @@ const Invitation = () => {
           fontWeight="bold"
           fontSize="lg"
           textAlign="center"
+          letterSpacing="wider"
         >
           {isMobile ? (
             <HStack>

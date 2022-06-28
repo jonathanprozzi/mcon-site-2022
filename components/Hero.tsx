@@ -54,7 +54,6 @@ const Hero = ({ heroHeight = "100vh" }: HeroProps) => {
               direction={{ base: "column" }}
               fontFamily="Dagheest-Gothic"
               fontSize={{ base: "20px", lg: "36px" }}
-              letterSpacing="tighter"
               fontWeight="bold"
               color="black"
             >
