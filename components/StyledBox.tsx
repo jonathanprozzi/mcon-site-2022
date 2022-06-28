@@ -95,6 +95,9 @@ const StyledBox = ({
             borderLeft="4px solid black"
             borderRadius="0"
             onClick={handleHideSelf}
+            _hover={{
+              cursor: 'url("/Mouse.png"), pointer'
+            }}
           />
         )}
       </Flex>
