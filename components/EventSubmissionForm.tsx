@@ -1,12 +1,11 @@
 import { useState } from "react";
 import {
   Box,
+  Flex,
   Button,
-  Heading,
   Input,
   Textarea,
   Stack,
-  Text,
   FormErrorMessage,
   FormLabel,
   FormControl,
@@ -132,6 +131,34 @@ const EventSubmissionForm = ({ onClose }: EventSubmissionFormProps) => {
                     {errors.eventDescription && errors.eventDescription.message}
                   </FormErrorMessage>
                 </FormControl>
+                <Flex direction={{ base: "column" }}>
+                  <FormControl isInvalid={errors.eventStartTime}>
+                    <FormLabel htmlFor="eventStartTime">
+                      Event Start Time
+                    </FormLabel>
+                    <ReactDatePicker
+                      showTimeSelect
+                      timeFormat="HH:mm"
+                      timeIntervals={15}
+                      dateFormat="yyyy/MM/dd"
+                    />
+                    <FormErrorMessage>
+                      {errors.eventStartTime && errors.eventStartTime.message}
+                    </FormErrorMessage>
+                  </FormControl>
+                  <FormControl isInvalid={errors.eventEndTime}>
+                    <FormLabel htmlFor="eventEndTime">Event End Time</FormLabel>
+                    <ReactDatePicker
+                      showTimeSelect
+                      timeFormat="HH:mm"
+                      timeIntervals={15}
+                      dateFormat="yyyy/MM/dd"
+                    />
+                    <FormErrorMessage>
+                      {errors.eventEndTime && errors.eventEndTime.message}
+                    </FormErrorMessage>
+                  </FormControl>
+                </Flex>
                 <FormControl isInvalid={errors.organizerTelegramHandle}>
                   <FormLabel htmlFor="organizerTelegramHandle">
                     Organizer&apos;s Telegram Handle
