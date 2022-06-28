@@ -1,6 +1,6 @@
-import { Flex, Heading, Alert, Spinner, Text, Box } from "@chakra-ui/react";
+import { Flex, Heading, Alert, Spinner, Box } from "@chakra-ui/react";
 import EventDetails from "components/EventDetails";
-import StyledBox from "components/StyledBox";
+
 import useSWR from "swr";
 
 const fetcher = async (url: string) => {
@@ -53,56 +53,26 @@ export default function Details() {
     );
   }
 
-  if (data.length === 0) {
-    return (
-      <Flex
-        direction="column"
-        justify="center"
-        align="center"
-        minHeight="100vh"
-      >
-        <Flex
-          direction="column"
-          alignItems="center"
-          justifyContent="center"
-          marginX={{ base: "8" }}
-        >
-          <Text fontSize="lg">There are no events!</Text>
-        </Flex>
-      </Flex>
-    );
-  }
-
-  console.log("data", data);
-
   return (
-    <Box as="section" minWidth="100vw" minHeight="100vh">
-      <Box
-        maxW={{ base: "xl", md: "7xl" }}
-        marginX={{ base: "auto", md: "auto" }}
-        paddingX={{ base: "4", md: "10" }}
-        paddingTop={20}
-        paddingBottom={20}
-      >
-        <Box
-          maxW={{ base: "xl", md: "7xl" }}
-          marginTop={20}
-          mx="auto"
-          px={{ base: "6", md: "8" }}
+    <Flex
+      direction="column"
+      alignItems="center"
+      justifyContent="center"
+      minHeight="100vh"
+    >
+      <Box>
+        <Heading
+          as="h2"
+          textAlign="center"
+          color="black"
+          fontFamily="Basteleur"
+          fontWeight="bold"
+          marginX="auto"
         >
-          <Heading
-            as="h2"
-            textAlign="center"
-            color="black"
-            fontFamily="Basteleur"
-            fontWeight="bold"
-            marginX="auto"
-          >
-            Event Details
-          </Heading>
-          <EventDetails events={data} />
-        </Box>
+          Event Details
+        </Heading>
+        <EventDetails events={data} />
       </Box>
-    </Box>
+    </Flex>
   );
 }

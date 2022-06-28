@@ -1,80 +1,74 @@
-import {
-  Box,
-  Button,
-  Text,
-  Flex,
-  AspectRatio,
-  Link as ChakraLink,
-  Img
-} from "@chakra-ui/react";
+import { Box, Button, Text, Flex, Link as ChakraLink } from "@chakra-ui/react";
 import StyledBox from "components/StyledBox";
 import EventCard from "components/EventCard";
 
-interface IEvents {
+interface EventsProps {
   events: any[];
 }
 
-const EventDetails = ({ events }: IEvents) => {
-  console.log("events", events);
+const EventDetails = ({ events }: EventsProps) => {
   return (
-    <Box id="events" as="section">
-      <Box
-        maxW={{ base: "3xl", md: "7xl" }}
-        width={{ base: "100vw", md: "70vw" }}
-        marginX="auto"
-        paddingX={{ base: "6", md: "10" }}
-        paddingY={{ base: "8", md: "10" }}
+    <Flex
+      direction="column"
+      justifyContent="center"
+      alignItems="center"
+      paddingTop={{ base: "0", md: "5rem" }}
+      width="100%"
+      maxWidth="3xl"
+    >
+      <Text
+        as="span"
+        fontFamily="Dagheest"
+        fontSize="md"
+        lineHeight={[6, 6, 6, 6]}
+        letterSpacing="widest"
+        color="black"
+        paddingX={8}
+        paddingY={4}
+        width="100%"
       >
-        <Text
-          as="span"
-          fontFamily="Dagheest"
-          fontSize="md"
-          lineHeight={[6, 6, 6, 6]}
-          letterSpacing="widest"
-          color="black"
-        >
-          Here is the MCON 2022 Events Calendar. Check back for updates. If
-          you&apos;re signed in to your Google account, you can click the Add
-          Calendar button to add the events schedule.{" "}
-        </Text>
+        Here is the MCON 2022 Events Calendar. Check back for updates. If
+        you&apos;re signed in to your Google account, you can click the Add
+        Calendar button to add the events schedule.{" "}
+      </Text>
 
-        <Flex
-          maxW={{ base: "3xl", md: "7xl" }}
-          width={{ base: "100vw", md: "70vw" }}
-          marginX="auto"
-          paddingTop={{ base: "2", md: "2" }}
-          paddingBottom={{ base: "4", md: "4" }}
+      <Flex
+        direction="column"
+        paddingX={{ base: 10, lg: 0 }}
+        gap={{ base: 4, lg: 2 }}
+        paddingTop={{ base: "2", md: "2" }}
+        paddingBottom={{ base: "4", md: "4" }}
+      >
+        <ChakraLink
+          isExternal
+          // href="https://calendar.google.com/calendar/u/5?cid=Y19hZzZhc21jczJ2ZGlpMGFrc3RxdGsyOTBsa0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t"
+          _hover={{
+            textDecoration: "none"
+          }}
         >
-          <ChakraLink
-            isExternal
-            // href="https://calendar.google.com/calendar/u/5?cid=Y19hZzZhc21jczJ2ZGlpMGFrc3RxdGsyOTBsa0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t"
+          <Button
+            textDecoration="none"
+            fontSize="2xl"
+            borderRadius="none"
+            paddingY={1}
+            paddingX={2}
+            transition="all ease-in-out .25s"
+            color="primaryRed"
+            bgColor="primaryNeon"
+            fontFamily="Dagheest"
+            border="2px solid"
             _hover={{
-              textDecoration: "none"
+              bgColor: "black",
+              color: "primaryNeon",
+              border: "2px solid",
+              borderColor: "primaryNeon",
+              cursor: "not-allowed"
             }}
           >
-            <Box
-              textDecoration="none"
-              fontSize="2xl"
-              borderRadius="none"
-              paddingY={1}
-              paddingX={2}
-              transition="all ease-in-out .25s"
-              color="primaryRed"
-              bgColor="primaryNeon"
-              fontFamily="Dagheest"
-              border="2px solid"
-              _hover={{
-                bgColor: "black",
-                color: "primaryNeon",
-                border: "2px solid",
-                borderColor: "primaryNeon",
-                cursor: "pointer"
-              }}
-            >
-              Add Calendar
-            </Box>
-          </ChakraLink>
-        </Flex>
+            Add Calendar (Soon!)
+          </Button>
+        </ChakraLink>
+
         <Box position="relative">
           {/* <Image
           alt="MCON 2022 Event Schedule"
@@ -106,19 +100,35 @@ const EventDetails = ({ events }: IEvents) => {
           ></iframe>
         </AspectRatio> */}
         <StyledBox title="SCHEDULE.txt" showIcon={false}>
-          <Flex direction="column" bgColor="primaryRed" padding={4} gap={4}>
-            {events.map((event: any) => (
-              <EventCard
-                title={event.fields["Event Title"]}
-                description={event.fields["Event Description"]}
-                startTime={event.fields["Event Start Time"]}
-                endTime={event.fields["Event End Time"]}
-              />
-            ))}
-          </Flex>
+          {events?.length > 0 ? (
+            <Flex direction="column" bgColor="primaryRed" padding={4} gap={4}>
+              {events?.map((event: any) => (
+                <EventCard
+                  title={event.fields["Event Title"]}
+                  description={event.fields["Event Description"]}
+                  startTime={event.fields["Event Start Time"]}
+                  endTime={event.fields["Event End Time"]}
+                />
+              ))}
+            </Flex>
+          ) : (
+            <Flex
+              direction="column"
+              bgColor="white"
+              paddingX={8}
+              paddingY={4}
+              color="black"
+              fontFamily="Dagheest"
+              fontSize="md"
+            >
+              <Text>
+                There are no side events scheduled yet! Check back soon.
+              </Text>
+            </Flex>
+          )}
         </StyledBox>
-      </Box>
-    </Box>
+      </Flex>
+    </Flex>
   );
 };
 
