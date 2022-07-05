@@ -157,7 +157,7 @@ const EventSubmissionForm = ({ onClose }: EventSubmissionFormProps) => {
                           showTimeSelect
                           timeFormat="hh:mm"
                           timeIntervals={30}
-                          dateFormat="yyyy/MM/dd hh:mm"
+                          dateFormat="yyyy/MM/dd hh:mm aa"
                           onChange={date => field.onChange(date)}
                           selected={field.value}
                           customInput={<CustomDatePickerButton />}
@@ -180,7 +180,7 @@ const EventSubmissionForm = ({ onClose }: EventSubmissionFormProps) => {
                           showTimeSelect
                           timeFormat="hh:mm"
                           timeIntervals={30}
-                          dateFormat="yyyy/MM/dd hh:mm"
+                          dateFormat="yyyy/MM/dd hh:mm aa"
                           onChange={date => field.onChange(date)}
                           selected={field.value}
                           customInput={<CustomDatePickerButton />}
