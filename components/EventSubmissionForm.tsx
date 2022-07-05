@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
   Box,
   Flex,
@@ -11,6 +11,7 @@ import {
   FormControl,
   useToast
 } from "@chakra-ui/react";
+import { CustomDatePickerButton } from "components/CustomDatePickerButton";
 import ReactDatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { useForm, Controller } from "react-hook-form";
@@ -20,6 +21,8 @@ interface EventSubmissionFormProps {
 }
 
 const EventSubmissionForm = ({ onClose }: EventSubmissionFormProps) => {
+  const [startTime, setStartTime] = useState(new Date());
+  const [endTime, setEndTime] = useState(new Date());
   const [isSending, setSending] = useState(false);
   const toast = useToast();
 
@@ -27,8 +30,14 @@ const EventSubmissionForm = ({ onClose }: EventSubmissionFormProps) => {
     handleSubmit,
     register,
     control,
+    setValue,
     formState: { errors, isSubmitting }
   } = useForm();
+
+  useEffect(() => {
+    setValue("eventStartTime", startTime);
+    setValue("eventEndTime", endTime);
+  }, []);
 
   async function onSubmit(values) {
     console.log("values", values);
@@ -148,7 +157,10 @@ const EventSubmissionForm = ({ onClose }: EventSubmissionFormProps) => {
                           showTimeSelect
                           timeFormat="hh:mm"
                           timeIntervals={30}
-                          dateFormat="yyyy/MM/dd"
+                          dateFormat="yyyy/MM/dd hh:mm"
+                          onChange={date => field.onChange(date)}
+                          selected={field.value}
+                          customInput={<CustomDatePickerButton />}
                         />
                       )}
                     />
@@ -168,7 +180,10 @@ const EventSubmissionForm = ({ onClose }: EventSubmissionFormProps) => {
                           showTimeSelect
                           timeFormat="hh:mm"
                           timeIntervals={30}
-                          dateFormat="yyyy/MM/dd"
+                          dateFormat="yyyy/MM/dd hh:mm"
+                          onChange={date => field.onChange(date)}
+                          selected={field.value}
+                          customInput={<CustomDatePickerButton />}
                         />
                       )}
                     />
