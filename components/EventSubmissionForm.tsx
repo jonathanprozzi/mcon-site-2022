@@ -26,18 +26,20 @@ const EventSubmissionForm = ({ onClose }: EventSubmissionFormProps) => {
   const {
     handleSubmit,
     register,
+    control,
     formState: { errors, isSubmitting }
   } = useForm();
 
   async function onSubmit(values) {
+    console.log("values", values);
     setSending(false);
 
     const res = await fetch("/api/create-event-submission", {
       method: "POST",
       body: JSON.stringify({
         daoName: values.daoName,
-        eventTitle: values.daoTitle,
-        eventDescription: values.daoDescription,
+        eventTitle: values.eventTitle,
+        eventDescription: values.eventDescription,
         eventStartTime: values.eventStartTime,
         eventEndTime: values.eventEndTime,
         organizerTelegramHandle: values.organizerTelegramHandle,
@@ -102,7 +104,7 @@ const EventSubmissionForm = ({ onClose }: EventSubmissionFormProps) => {
                       required: "Your event title is required",
                       minLength: {
                         value: 4,
-                        message: "Minimum length should be 2"
+                        message: "Minimum length should be 4 characters"
                       }
                     })}
                   />
@@ -122,8 +124,8 @@ const EventSubmissionForm = ({ onClose }: EventSubmissionFormProps) => {
                     {...register("eventDescription", {
                       required: "Your event description is required",
                       minLength: {
-                        value: 4,
-                        message: "Minimum length should be 2"
+                        value: 2,
+                        message: "Minimum length should be 2 characters"
                       }
                     })}
                   />
@@ -136,11 +138,19 @@ const EventSubmissionForm = ({ onClose }: EventSubmissionFormProps) => {
                     <FormLabel htmlFor="eventStartTime">
                       Event Start Time
                     </FormLabel>
-                    <ReactDatePicker
-                      showTimeSelect
-                      timeFormat="HH:mm"
-                      timeIntervals={15}
-                      dateFormat="yyyy/MM/dd"
+                    <Controller
+                      name="eventStartTime"
+                      control={control}
+                      shouldUnregister={false}
+                      render={({ field }) => (
+                        <ReactDatePicker
+                          {...field}
+                          showTimeSelect
+                          timeFormat="hh:mm"
+                          timeIntervals={30}
+                          dateFormat="yyyy/MM/dd"
+                        />
+                      )}
                     />
                     <FormErrorMessage>
                       {errors.eventStartTime && errors.eventStartTime.message}
@@ -148,11 +158,19 @@ const EventSubmissionForm = ({ onClose }: EventSubmissionFormProps) => {
                   </FormControl>
                   <FormControl isInvalid={errors.eventEndTime}>
                     <FormLabel htmlFor="eventEndTime">Event End Time</FormLabel>
-                    <ReactDatePicker
-                      showTimeSelect
-                      timeFormat="HH:mm"
-                      timeIntervals={15}
-                      dateFormat="yyyy/MM/dd"
+                    <Controller
+                      name="eventEndTime"
+                      control={control}
+                      shouldUnregister={false}
+                      render={({ field }) => (
+                        <ReactDatePicker
+                          {...field}
+                          showTimeSelect
+                          timeFormat="hh:mm"
+                          timeIntervals={30}
+                          dateFormat="yyyy/MM/dd"
+                        />
+                      )}
                     />
                     <FormErrorMessage>
                       {errors.eventEndTime && errors.eventEndTime.message}
@@ -171,8 +189,9 @@ const EventSubmissionForm = ({ onClose }: EventSubmissionFormProps) => {
                     {...register("organizerTelegramHandle", {
                       required: "Telegram Handle is required",
                       minLength: {
-                        value: 4,
-                        message: "Minimum length should be 2"
+                        value: 2,
+                        message:
+                          "Minimum length should be at least 2 characters"
                       }
                     })}
                   />

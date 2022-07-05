@@ -19,6 +19,7 @@ const createEventSubmission: NextApiHandler = async (req, res) => {
     organizerTelegramHandle,
     otherNotes
   } = req.body;
+  console.log("req.body", req.body);
 
   try {
     const airtableRecord = await eventSubmissionsTable.create({

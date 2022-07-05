@@ -183,7 +183,7 @@ const Hero = ({ heroHeight = "100vh" }: HeroProps) => {
             marginTop={{ base: 4 }}
             gap={4}
           >
-            {/* <Flex direction={{ base: "column", lg: "row" }} gap={4}>
+            <Flex direction={{ base: "column", lg: "row" }} gap={4}>
               <Button
                 borderRadius="none"
                 paddingY={8}
@@ -206,7 +206,7 @@ const Hero = ({ heroHeight = "100vh" }: HeroProps) => {
               >
                 Submit a Side Event
               </Button>
-            </Flex> */}
+            </Flex>
 
             <Heading
               as="span"
