@@ -204,9 +204,9 @@ const EventSubmissionForm = ({ onClose }: EventSubmissionFormProps) => {
                     {...register("organizerTelegramHandle", {
                       required: "Telegram Handle is required",
                       minLength: {
-                        value: 2,
+                        value: 5,
                         message:
-                          "Minimum length should be at least 2 characters"
+                          "Minimum length should be at least 5 characters"
                       }
                     })}
                   />
