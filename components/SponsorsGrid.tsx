@@ -19,7 +19,6 @@ const SponsorsGrid = () => (
       columns={{ base: 1, md: 4 }}
       spacing={{ base: "4", md: "12", lg: "12" }}
       marginBottom={12}
-      // marginX={{ base: 0, lg: 12 }}
       alignItems="flex-start"
       justifyItems="center"
     >
