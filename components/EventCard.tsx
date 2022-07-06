@@ -44,6 +44,7 @@ const EventCard = ({ title, description, startTime, endTime }: IEvent) => {
           color="primaryNeon"
           border="2px solid"
           borderColor="primaryNeon"
+          width="100%"
         >
           {description}
         </Text>
