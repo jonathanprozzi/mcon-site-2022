@@ -25,6 +25,7 @@ const SponsorsGrid = () => (
     >
       <Sponsors.MetaFactory />
       <Sponsors.FireEyes />
+      <Sponsors.Lens />
       <Sponsors.Snapshot />
     </SimpleGrid>
   </Flex>

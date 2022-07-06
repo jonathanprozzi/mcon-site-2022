@@ -16,8 +16,8 @@ const theme = extendTheme({
       variants: {
         filled: {
           field: {
-            color: "primaryNeon",
-            bg: "primaryRed",
+            color: "primaryRed",
+            bg: "black",
             borderRadius: 0,
             padding: "16px",
             _focus: {
@@ -25,8 +25,8 @@ const theme = extendTheme({
               color: "primaryRed"
             },
             _hover: {
-              bg: "primaryRed",
-              color: "primaryNeon"
+              bg: "black",
+              color: "primaryRed"
             },
             _placeholder: {
               color: "primaryNeon"
@@ -39,12 +39,12 @@ const theme = extendTheme({
       variants: {
         filled: {
           borderRadius: 0,
-          color: [null, "primaryNeon"],
-          bg: [null, "primaryRed"],
+          color: [null, "primaryRed"],
+          bg: [null, "black"],
           padding: "16px",
           _hover: {
-            bg: [null, "primaryRed"],
-            color: [null, "primaryNeon"]
+            bg: [null, "black"],
+            color: [null, "primaryRed"]
           },
           _focus: {
             bg: [null, "black"],

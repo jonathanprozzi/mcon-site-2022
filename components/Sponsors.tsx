@@ -89,10 +89,24 @@ export const MCV = () => (
   </Box>
 );
 
+export const Lens = () => (
+  <Box position="relative" alignItems="center" justifyContent="center">
+    <Image
+      alt="Logo for Lens - a MCON Denver 2022 supporter"
+      width={400}
+      height={200}
+      objectFit="contain"
+      placeholder="blur"
+      blurDataURL="/lens-logo.svg"
+      src="/lens-logo.svg"
+    />
+  </Box>
+);
+
 export const MetaFactory = () => (
   <Box position="relative" alignItems="center" justifyContent="center">
     <Image
-      alt="Logo for MetaFactory - a MCON Denver 2022 sponsor"
+      alt="Logo for MetaFactory - a MCON Denver 2022 supporter"
       width={400}
       height={200}
       objectFit="contain"
@@ -103,24 +117,10 @@ export const MetaFactory = () => (
   </Box>
 );
 
-export const DAOhaus = () => (
-  <Box position="relative" alignItems="center" justifyContent="center">
-    <Image
-      alt="Sponsor logo for DAOhaus - a MCON Denver 2022 sponsor"
-      width={400}
-      height={200}
-      objectFit="contain"
-      placeholder="blur"
-      blurDataURL="/DAOHausRedLogo.svg"
-      src="/DAOHausRedLogo.svg"
-    />
-  </Box>
-);
-
 export const FireEyes = () => (
   <Box position="relative" alignItems="center" justifyContent="center">
     <Image
-      alt="Sponsor logo for FireEyes - a MCON Denver 2022 sponsor"
+      alt="Sponsor logo for FireEyes - a MCON Denver 2022 supporter"
       width={400}
       height={200}
       objectFit="contain"
@@ -134,7 +134,7 @@ export const FireEyes = () => (
 export const Snapshot = () => (
   <Box position="relative" alignItems="center" justifyContent="center">
     <Image
-      alt="Sponsor logo for Snapshot - a MCON Denver 2022 sponsor"
+      alt="Sponsor logo for Snapshot - a MCON Denver 2022 supporter"
       width={400}
       height={200}
       objectFit="contain"

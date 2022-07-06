@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
   Box,
   Flex,
@@ -11,6 +11,7 @@ import {
   FormControl,
   useToast
 } from "@chakra-ui/react";
+import { CustomDatePickerButton } from "components/CustomDatePickerButton";
 import ReactDatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { useForm, Controller } from "react-hook-form";
@@ -20,24 +21,34 @@ interface EventSubmissionFormProps {
 }
 
 const EventSubmissionForm = ({ onClose }: EventSubmissionFormProps) => {
+  const [startTime, setStartTime] = useState(new Date());
+  const [endTime, setEndTime] = useState(new Date());
   const [isSending, setSending] = useState(false);
   const toast = useToast();
 
   const {
     handleSubmit,
     register,
+    control,
+    setValue,
     formState: { errors, isSubmitting }
   } = useForm();
 
+  useEffect(() => {
+    setValue("eventStartTime", startTime);
+    setValue("eventEndTime", endTime);
+  }, []);
+
   async function onSubmit(values) {
+    console.log("values", values);
     setSending(false);
 
     const res = await fetch("/api/create-event-submission", {
       method: "POST",
       body: JSON.stringify({
         daoName: values.daoName,
-        eventTitle: values.daoTitle,
-        eventDescription: values.daoDescription,
+        eventTitle: values.eventTitle,
+        eventDescription: values.eventDescription,
         eventStartTime: values.eventStartTime,
         eventEndTime: values.eventEndTime,
         organizerTelegramHandle: values.organizerTelegramHandle,
@@ -102,7 +113,7 @@ const EventSubmissionForm = ({ onClose }: EventSubmissionFormProps) => {
                       required: "Your event title is required",
                       minLength: {
                         value: 4,
-                        message: "Minimum length should be 2"
+                        message: "Minimum length should be 4 characters"
                       }
                     })}
                   />
@@ -122,8 +133,8 @@ const EventSubmissionForm = ({ onClose }: EventSubmissionFormProps) => {
                     {...register("eventDescription", {
                       required: "Your event description is required",
                       minLength: {
-                        value: 4,
-                        message: "Minimum length should be 2"
+                        value: 2,
+                        message: "Minimum length should be 2 characters"
                       }
                     })}
                   />
@@ -136,11 +147,22 @@ const EventSubmissionForm = ({ onClose }: EventSubmissionFormProps) => {
                     <FormLabel htmlFor="eventStartTime">
                       Event Start Time
                     </FormLabel>
-                    <ReactDatePicker
-                      showTimeSelect
-                      timeFormat="HH:mm"
-                      timeIntervals={15}
-                      dateFormat="yyyy/MM/dd"
+                    <Controller
+                      name="eventStartTime"
+                      control={control}
+                      shouldUnregister={false}
+                      render={({ field }) => (
+                        <ReactDatePicker
+                          {...field}
+                          showTimeSelect
+                          timeFormat="hh:mm"
+                          timeIntervals={30}
+                          dateFormat="yyyy/MM/dd hh:mm aa"
+                          onChange={date => field.onChange(date)}
+                          selected={field.value}
+                          customInput={<CustomDatePickerButton />}
+                        />
+                      )}
                     />
                     <FormErrorMessage>
                       {errors.eventStartTime && errors.eventStartTime.message}
@@ -148,11 +170,22 @@ const EventSubmissionForm = ({ onClose }: EventSubmissionFormProps) => {
                   </FormControl>
                   <FormControl isInvalid={errors.eventEndTime}>
                     <FormLabel htmlFor="eventEndTime">Event End Time</FormLabel>
-                    <ReactDatePicker
-                      showTimeSelect
-                      timeFormat="HH:mm"
-                      timeIntervals={15}
-                      dateFormat="yyyy/MM/dd"
+                    <Controller
+                      name="eventEndTime"
+                      control={control}
+                      shouldUnregister={false}
+                      render={({ field }) => (
+                        <ReactDatePicker
+                          {...field}
+                          showTimeSelect
+                          timeFormat="hh:mm"
+                          timeIntervals={30}
+                          dateFormat="yyyy/MM/dd hh:mm aa"
+                          onChange={date => field.onChange(date)}
+                          selected={field.value}
+                          customInput={<CustomDatePickerButton />}
+                        />
+                      )}
                     />
                     <FormErrorMessage>
                       {errors.eventEndTime && errors.eventEndTime.message}
@@ -171,8 +204,9 @@ const EventSubmissionForm = ({ onClose }: EventSubmissionFormProps) => {
                     {...register("organizerTelegramHandle", {
                       required: "Telegram Handle is required",
                       minLength: {
-                        value: 4,
-                        message: "Minimum length should be 2"
+                        value: 5,
+                        message:
+                          "Minimum length should be at least 5 characters"
                       }
                     })}
                   />

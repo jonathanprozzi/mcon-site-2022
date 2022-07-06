@@ -1,4 +1,11 @@
-import { Box, Button, Text, Flex, Link as ChakraLink } from "@chakra-ui/react";
+import {
+  AspectRatio,
+  Box,
+  Button,
+  Text,
+  Flex,
+  Link as ChakraLink
+} from "@chakra-ui/react";
 import StyledBox from "components/StyledBox";
 import EventCard from "components/EventCard";
 
@@ -41,7 +48,7 @@ const EventDetails = ({ events }: EventsProps) => {
       >
         <ChakraLink
           isExternal
-          // href="https://calendar.google.com/calendar/u/5?cid=Y19hZzZhc21jczJ2ZGlpMGFrc3RxdGsyOTBsa0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t"
+          href="https://calendar.google.com/calendar/u/3/r/settings/calendar/ZnJkbThqYTk2Zzk2YzA1OW5tOGVqaWk4dWtAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ"
           _hover={{
             textDecoration: "none"
           }}
@@ -61,44 +68,22 @@ const EventDetails = ({ events }: EventsProps) => {
               bgColor: "black",
               color: "primaryNeon",
               border: "2px solid",
-              borderColor: "primaryNeon",
-              cursor: "not-allowed"
+              borderColor: "primaryNeon"
             }}
           >
-            Add Calendar (Soon!)
+            Add Calendar
           </Button>
         </ChakraLink>
-
-        <Box position="relative">
-          {/* <Image
-          alt="MCON 2022 Event Schedule"
-          layout="responsive"
-          width={400}
-          height={400}
-          placeholder="blur"
-          blurDataURL="/mcon-schedule.jpg"
-          src="/mcon-schedule.jpg"
-        /> */}
-        </Box>
-        {/* <AspectRatio ratio={1} maxHeight="100vh" marginY={4}>
-        <iframe
-          src="https://calendar.google.com/calendar/embed?height=599&wkst=1&bgcolor=%23D50000&ctz=America%2FDenver&src=ZGFtYWdlZGdvb2RzQG1ldGFjYXJ0ZWwub3Jn&src=Y19hZzZhc21jczJ2ZGlpMGFrc3RxdGsyOTBsa0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=ZW4udXNhI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&src=aHQzamxmYWFjNWxmZDYyNjN1bGZoNHRxbDhAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23039BE5&color=%23AD1457&color=%230B8043&color=%23B39DDB&mode=WEEK&showNav=0&showPrint=0&showCalendars=1&title=MCON%202021"
-          scrolling="no"
-          width="800"
-          height="600"
-        />
-      </AspectRatio> */}
-        {/* <AspectRatio ratio={1} maxHeight='60vh' marginY={4}>
+        <AspectRatio ratio={1} maxHeight="100vh" marginY={4}>
           <iframe
-            width='560'
-            height='315'
-            src='https://www.youtube.com/embed/J1NV6CUJl18'
-            title='YouTube video player'
-            frameborder='0'
-            allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
-            allowfullscreen
-          ></iframe>
-        </AspectRatio> */}
+            title="MetaCartel MCON2022 Events Calendar"
+            src="https://calendar.google.com/calendar/embed?src=frdm8ja96g96c059nm8ejii8uk%40group.calendar.google.com&ctz=America%2FLos_Angeles"
+            width="800"
+            height="600"
+            frameBorder="0"
+            scrolling="no"
+          />
+        </AspectRatio>
         <StyledBox title="SCHEDULE.txt" showIcon={false}>
           {events?.length > 0 ? (
             <Flex direction="column" bgColor="primaryRed" padding={4} gap={4}>
@@ -108,6 +93,7 @@ const EventDetails = ({ events }: EventsProps) => {
                   description={event.fields["Event Description"]}
                   startTime={event.fields["Event Start Time"]}
                   endTime={event.fields["Event End Time"]}
+                  key={`${event.fields["Event Title"]}-${event.fields["Event Start Time"]}`}
                 />
               ))}
             </Flex>
