@@ -88,13 +88,28 @@ const Navbar: React.FC = () => {
                 text="Apply"
                 isExternal
               />
-
-              <Link href="/" passHref>
-                <ChakraLink style={{ textDecoration: "none" }}>
-                  <Logo />
-                </ChakraLink>
-              </Link>
             </Box>
+            <Button
+              borderRadius="none"
+              transition="all ease-in-out .25s"
+              color="primaryRed"
+              bgColor="primaryNeon"
+              fontFamily="Dagheest"
+              border="2px solid"
+              _hover={{
+                bgColor: "black",
+                color: "primaryNeon",
+                border: "2px solid",
+                borderColor: "primaryNeon"
+              }}
+            >
+              Buy Ticket
+            </Button>
+            <Link href="/" passHref>
+              <ChakraLink style={{ textDecoration: "none" }}>
+                <Logo />
+              </ChakraLink>
+            </Link>
           </Stack>
         </MobileNav>
         <Flex
