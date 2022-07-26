@@ -109,13 +109,33 @@ const Navbar: React.FC = () => {
           <StyledLink href="/details" text="Details" />
           <StyledLink href="/#speakers" text="Speakers" />
           <StyledLink href="/#sponsors" text="Sponsors" />
-          <ChakraLink
-            _hover={{
-              textDecoration: "none"
-            }}
-            isExternal
-            href="https://metacartel.typeform.com/to/yiLK5My5"
-          >
+          <Flex gap={4}>
+            <ChakraLink
+              _hover={{
+                textDecoration: "none"
+              }}
+              isExternal
+              href="https://metacartel.typeform.com/to/yiLK5My5"
+            >
+              <Button
+                borderRadius="none"
+                paddingY={2}
+                paddingX={2}
+                transition="all ease-in-out .25s"
+                color="primaryRed"
+                bgColor="primaryNeon"
+                fontFamily="Dagheest"
+                border="2px solid"
+                _hover={{
+                  bgColor: "black",
+                  color: "primaryNeon",
+                  border: "2px solid",
+                  borderColor: "primaryNeon"
+                }}
+              >
+                Apply to Attend
+              </Button>
+            </ChakraLink>
             <Button
               borderRadius="none"
               paddingY={2}
@@ -132,9 +152,9 @@ const Navbar: React.FC = () => {
                 borderColor: "primaryNeon"
               }}
             >
-              Apply to Attend
+              Buy Ticket
             </Button>
-          </ChakraLink>
+          </Flex>
         </Flex>
       </Flex>
     </Flex>

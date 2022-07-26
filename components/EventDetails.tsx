@@ -74,7 +74,7 @@ const EventDetails = ({ events }: EventsProps) => {
             Add Calendar
           </Button>
         </ChakraLink>
-        <AspectRatio ratio={1} maxHeight="100vh" marginY={4}>
+        {/* <AspectRatio ratio={1} maxHeight="100vh" marginY={4}>
           <iframe
             title="MetaCartel MCON2022 Events Calendar"
             src="https://calendar.google.com/calendar/embed?src=frdm8ja96g96c059nm8ejii8uk%40group.calendar.google.com&ctz=America%2FLos_Angeles"
@@ -83,7 +83,7 @@ const EventDetails = ({ events }: EventsProps) => {
             frameBorder="0"
             scrolling="no"
           />
-        </AspectRatio>
+        </AspectRatio> */}
         <StyledBox title="SCHEDULE.txt" showIcon={false}>
           {events?.length > 0 ? (
             <Flex direction="column" bgColor="primaryRed" padding={4} gap={4}>
