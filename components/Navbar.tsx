@@ -89,7 +89,7 @@ const Navbar: React.FC = () => {
                 isExternal
               />
             </Box>
-            <Button
+            {/* <Button
               borderRadius="none"
               transition="all ease-in-out .25s"
               color="primaryRed"
@@ -104,7 +104,7 @@ const Navbar: React.FC = () => {
               }}
             >
               Buy Ticket
-            </Button>
+            </Button> */}
             <Link href="/" passHref>
               <ChakraLink style={{ textDecoration: "none" }}>
                 <Logo />
@@ -151,7 +151,7 @@ const Navbar: React.FC = () => {
                 Apply to Attend
               </Button>
             </ChakraLink>
-            <Button
+            {/* <Button
               borderRadius="none"
               paddingY={2}
               paddingX={2}
@@ -168,7 +168,7 @@ const Navbar: React.FC = () => {
               }}
             >
               Buy Ticket
-            </Button>
+            </Button> */}
           </Flex>
         </Flex>
       </Flex>
