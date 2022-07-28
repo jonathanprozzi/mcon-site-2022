@@ -93,7 +93,7 @@ export const Lens = () => (
   <Box position="relative" alignItems="center" justifyContent="center">
     <Image
       alt="Logo for Lens - a MCON Denver 2022 supporter"
-      width={400}
+      width={250}
       height={200}
       objectFit="contain"
       placeholder="blur"
@@ -107,7 +107,7 @@ export const MetaFactory = () => (
   <Box position="relative" alignItems="center" justifyContent="center">
     <Image
       alt="Logo for MetaFactory - a MCON Denver 2022 supporter"
-      width={400}
+      width={250}
       height={200}
       objectFit="contain"
       placeholder="blur"
@@ -121,7 +121,7 @@ export const FireEyes = () => (
   <Box position="relative" alignItems="center" justifyContent="center">
     <Image
       alt="Sponsor logo for FireEyes - a MCON Denver 2022 supporter"
-      width={400}
+      width={250}
       height={200}
       objectFit="contain"
       placeholder="blur"
@@ -135,12 +135,54 @@ export const Snapshot = () => (
   <Box position="relative" alignItems="center" justifyContent="center">
     <Image
       alt="Sponsor logo for Snapshot - a MCON Denver 2022 supporter"
-      width={400}
+      width={250}
       height={200}
       objectFit="contain"
       placeholder="blur"
       blurDataURL="/snapshotRED_svg.svg"
       src="/snapshotRED_svg.svg"
+    />
+  </Box>
+);
+
+export const MetaMask = () => (
+  <Box position="relative" alignItems="center" justifyContent="center">
+    <Image
+      alt="Sponsor logo for MetaMask - a MCON Denver 2022 supporter"
+      width={250}
+      height={200}
+      objectFit="contain"
+      placeholder="blur"
+      blurDataURL="/MetaMaskInstRedLogo.svg"
+      src="/MetaMaskInstRedLogo.svg"
+    />
+  </Box>
+);
+
+export const Logos = () => (
+  <Box position="relative" alignItems="center" justifyContent="center">
+    <Image
+      alt="Sponsor logo for Logos - a MCON Denver 2022 supporter"
+      width={250}
+      height={200}
+      objectFit="contain"
+      placeholder="blur"
+      blurDataURL="/LogosRedLOGO.svg"
+      src="/LogosRedLOGO.svg"
+    />
+  </Box>
+);
+
+export const Sponsor1kx = () => (
+  <Box position="relative" alignItems="center" justifyContent="center">
+    <Image
+      alt="Sponsor logo for 1kx - a MCON Denver 2022 supporter"
+      width={250}
+      height={200}
+      objectFit="contain"
+      placeholder="blur"
+      blurDataURL="/1kx_logo_red.svg"
+      src="/1kx_logo_red.svg"
     />
   </Box>
 );

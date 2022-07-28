@@ -16,7 +16,7 @@ const SponsorsGrid = () => (
       <Sponsors.CabinDAO />
     </SimpleGrid>
     <SimpleGrid
-      columns={{ base: 1, md: 4 }}
+      columns={{ base: 1, md: 3 }}
       spacing={{ base: "4", md: "12", lg: "12" }}
       marginBottom={12}
       alignItems="flex-start"
@@ -26,6 +26,9 @@ const SponsorsGrid = () => (
       <Sponsors.FireEyes />
       <Sponsors.Lens />
       <Sponsors.Snapshot />
+      <Sponsors.MetaMask />
+      <Sponsors.Logos />
+      <Sponsors.Sponsor1kx />
     </SimpleGrid>
   </Flex>
 );
