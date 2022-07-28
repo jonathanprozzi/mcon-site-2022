@@ -52,16 +52,18 @@ const Hero = ({ heroHeight = "100vh" }: HeroProps) => {
           >
             <Flex
               direction={{ base: "column" }}
-              fontFamily="Dagheest-Gothic"
               fontSize={{ base: "20px", lg: "36px" }}
               fontWeight="bold"
               color="black"
             >
-              <Text as="span">Get Your Spicy DAO Fix</Text>
+              <Text fontFamily="Dagheest-Bold" as="span">
+                Get Your Spicy DAO Fix
+              </Text>
 
               <Text
                 as="span"
                 fontWeight="regular"
+                fontFamily="Dagheest-Italic"
                 fontSize={{ base: "16px", lg: "30px" }}
                 color="black"
               >
