@@ -6,6 +6,7 @@ import { ChakraProvider } from "@chakra-ui/react";
 import SiteLayout from "../components/SiteLayout";
 import theme from "../theme";
 import Fonts from "../components/Fonts";
+import "../styles/globals.css";
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
   const router = useRouter();
