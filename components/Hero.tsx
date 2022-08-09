@@ -120,10 +120,10 @@ const Hero = ({ heroHeight = "100vh" }: HeroProps) => {
             </StyledBox>
             <StyledBox title="speakers" id="speakers" collapsed>
               <Flex bgColor="white" paddingX={8} paddingY={4}>
-                <Text color="black" fontFamily="Dagheest" fontSize="xl">
+                {/* <Text color="black" fontFamily="Dagheest" fontSize="xl">
                   Coming soon!
-                </Text>
-                {/* <SpeakersGrid /> */}
+                </Text> */}
+                <SpeakersGrid />
               </Flex>
             </StyledBox>
             <StyledBox title="sponsors" id="sponsors">

@@ -4,7 +4,7 @@ import { speakers } from "./_speakersData";
 
 const SpeakersGrid = () => (
   <SimpleGrid
-    columns={{ base: 1, md: 2 }}
+    columns={{ base: 1 }}
     spacing={{ base: "4", md: "12", lg: "16" }}
     margin={12}
     alignItems="flex-start"
@@ -12,10 +12,15 @@ const SpeakersGrid = () => (
   >
     {speakers.map(speaker => (
       <SpeakerCard
-        key={speaker.name}
-        name={speaker.name}
-        image={speaker.image}
-        organization={speaker.organization}
+        key={speaker.sessionTime}
+        title={speaker.title}
+        sessionTime={speaker.sessionTime}
+        nameOne={speaker.nameOne}
+        orgOne={speaker.orgOne}
+        imageOne={speaker.imageOne}
+        nameTwo={speaker.nameTwo}
+        orgTwo={speaker.orgTwo}
+        imageTwo={speaker.imageTwo}
       />
     ))}
   </SimpleGrid>
