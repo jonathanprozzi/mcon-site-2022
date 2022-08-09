@@ -42,7 +42,7 @@ const SpeakerCard = ({
     minHeight={{ base: "0", md: "0" }}
   >
     <SpeakerBox title={sessionTime} showIcon={false}>
-      <Flex>
+      <Flex direction={{ base: "column", lg: "row" }}>
         <Flex
           paddingY={4}
           paddingLeft={4}
