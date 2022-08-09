@@ -37,8 +37,9 @@ const SpeakerCard = ({
     direction="column"
     alignItems="center"
     justifyContent="flex-start"
-    minWidth={{ base: "60vw", md: "0" }}
-    minHeight={{ base: "0", md: "300px" }}
+    minWidth={{ base: "60vw", md: "30vw" }}
+    width={{ base: "60vw", md: "100%" }}
+    minHeight={{ base: "0", md: "0" }}
   >
     <SpeakerBox title={sessionTime} showIcon={false}>
       <Flex>
@@ -49,12 +50,18 @@ const SpeakerCard = ({
           justifyContent="center"
           alignItems="center"
         >
-          <VStack>
-            <Box position="relative" borderRadius="999px">
+          <VStack position="relative">
+            <Box
+              position="relative"
+              borderRadius="999px"
+              // backgroundColor="primaryNeon"
+              left="25%"
+              marginBottom="-40px"
+            >
               <Image
                 alt={`Photo of ${nameOne} - a speaker at MCON Denver 2022`}
-                width={200}
-                height={200}
+                width={100}
+                height={100}
                 objectFit="cover"
                 placeholder="blur"
                 blurDataURL={imageOne}
@@ -63,16 +70,20 @@ const SpeakerCard = ({
               />
             </Box>
             {nameTwo && (
-              <Box position="relative">
+              <Box
+                position="relative"
+                // backgroundColor="primaryNeon"
+                borderRadius="999px"
+              >
                 <Image
                   alt={`Photo of ${nameTwo} - a speaker at MCON Denver 2022`}
-                  width={200}
-                  height={200}
+                  width={100}
+                  height={100}
                   objectFit="cover"
                   placeholder="blur"
                   blurDataURL={imageTwo}
                   src={imageTwo}
-                  className="img__border-rounded"
+                  className="img__border-rounded__2"
                 />
               </Box>
             )}

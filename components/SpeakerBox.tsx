@@ -31,6 +31,7 @@ const SpeakerBox = ({
       borderX="4px solid black"
       position="relative"
       display={hideSelf ? "none" : "block"}
+      minWidth="100%"
       {...props}
     >
       <Flex
@@ -90,7 +91,11 @@ const SpeakerBox = ({
           />
         )}
       </Flex>
-      {!collapsedContent && <Box backgroundColor="black">{children}</Box>}
+      {!collapsedContent && (
+        <Box backgroundColor="black" paddingX={4}>
+          {children}
+        </Box>
+      )}
     </Flex>
   );
 };

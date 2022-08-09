@@ -2,3 +2,12 @@
   scroll-padding-top: 6rem;
   scroll-behavior: smooth;
 }
+
+.img__border-rounded {
+  border-radius: 9999px;
+}
+
+.img__border-rounded__2 {
+  border-radius: 9999px;
+
+}
