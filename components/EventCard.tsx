@@ -10,7 +10,7 @@ interface IEvent {
 
 const EventCard = ({ title, description, startTime, endTime }: IEvent) => {
   return (
-    <Flex direction="row" bgColor="primaryNeon">
+    <Flex direction={{ base: "column", lg: "row" }} bgColor="primaryNeon">
       <Flex
         paddingY={4}
         paddingLeft={4}
@@ -18,6 +18,7 @@ const EventCard = ({ title, description, startTime, endTime }: IEvent) => {
         flexDirection="column"
         justifyContent="center"
         alignItems="center"
+        wrap="wrap"
       >
         <Text
           color="primaryRed"
@@ -37,14 +38,19 @@ const EventCard = ({ title, description, startTime, endTime }: IEvent) => {
           {format(new Date(endTime), "Pp")}
         </Text>
       </Flex>
-      <Flex flexBasis="60%" paddingY={1} paddingRight={1}>
+      <Flex
+        flexBasis="60%"
+        paddingY={1}
+        paddingRight={1}
+        width="100%"
+        wordBreak="break-word"
+      >
         <Text
           fontFamily="Dagheest"
           bgColor="primaryRed"
           color="primaryNeon"
           border="2px solid"
           borderColor="primaryNeon"
-          width="100%"
         >
           {description}
         </Text>

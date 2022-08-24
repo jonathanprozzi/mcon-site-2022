@@ -33,6 +33,7 @@ const StyledBox = ({
       borderBottom="4px solid black"
       position="relative"
       display={hideSelf ? "none" : "block"}
+      maxWidth="3xl"
       {...props}
     >
       <Flex
@@ -61,6 +62,7 @@ const StyledBox = ({
                 width="100%"
               >
                 <Text
+                  as="h2"
                   color="black"
                   fontFamily="Dagheest-Italic"
                   fontStyle="italic"
@@ -74,6 +76,7 @@ const StyledBox = ({
             ) : (
               <Text
                 color="black"
+                as="h2"
                 fontFamily="Dagheest-Italic"
                 fontStyle="italic"
                 paddingX={6}

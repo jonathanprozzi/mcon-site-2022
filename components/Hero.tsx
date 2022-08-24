@@ -9,19 +9,38 @@ import {
   useDisclosure,
   useBreakpointValue
 } from "@chakra-ui/react";
+import useSWR from "swr";
+
 import StyledBox from "components/StyledBox";
 import ModalWrapper from "components/ModalWrapper";
 import EventSubmissionForm from "components/EventSubmissionForm";
 import SpeakersGrid from "components/SpeakersGrid";
+import EventCard from "components/EventCard";
+import EventDetails from "components/EventDetails";
 import SponsorsGrid from "./SponsorsGrid";
 
 interface HeroProps {
   heroHeight?: string;
 }
 
+const fetcher = async (url: string) => {
+  const res = await fetch(url, {
+    method: "GET",
+    mode: "no-cors",
+    credentials: "same-origin"
+  });
+  if (!res.ok) {
+    throw Error("There is problem with reading the Events.");
+  }
+  const data = await res.json();
+
+  return data;
+};
+
 const Hero = ({ heroHeight = "100vh" }: HeroProps) => {
   const sideEventForm = useDisclosure();
   const isMobile = useBreakpointValue({ base: true, lg: false });
+  const { data, error } = useSWR(`/api/get-events`, fetcher, {});
 
   return (
     <>
@@ -31,7 +50,7 @@ const Hero = ({ heroHeight = "100vh" }: HeroProps) => {
         justifyContent="center"
         alignItems="center"
         paddingTop={{ base: "0", md: "5rem" }}
-        maxWidth="3xl"
+        // maxWidth="3xl"
       >
         <VisuallyHidden>
           <Heading as="h1">MCON Denver 2022</Heading>
@@ -76,7 +95,7 @@ const Hero = ({ heroHeight = "100vh" }: HeroProps) => {
               {isMobile ? (
                 <Image src="/MCON2.gif" width={350} height={350} />
               ) : (
-                <Image src="/MCON2.gif" width={700} height={700} />
+                <Image src="/MCON2.gif" width={800} height={700} />
               )}
             </StyledBox>
             <StyledBox title="about" id="about">
@@ -88,7 +107,7 @@ const Hero = ({ heroHeight = "100vh" }: HeroProps) => {
                 </Text>
               </Flex>
             </StyledBox>
-            <StyledBox title="details" id="details">
+            <StyledBox title="details" id="details" width="100%">
               <Flex
                 direction="column"
                 bgColor="white"
@@ -116,6 +135,47 @@ const Hero = ({ heroHeight = "100vh" }: HeroProps) => {
                   discussions. Worst comes to worse you can always form a circle
                   on the lawn.
                 </Text>
+                <br />
+                <Text
+                  as="h3"
+                  fontSize="2xl"
+                  fontWeight="bolder"
+                  marginBottom={4}
+                >
+                  Side Events Schedule
+                </Text>
+                {data?.length > 0 ? (
+                  <Flex
+                    direction="column"
+                    bgColor="primaryRed"
+                    padding={4}
+                    gap={4}
+                  >
+                    {data?.map((event: any) => (
+                      <EventCard
+                        title={event.fields["Event Title"]}
+                        description={event.fields["Event Description"]}
+                        startTime={event.fields["Event Start Time"]}
+                        endTime={event.fields["Event End Time"]}
+                        key={`${event.fields["Event Title"]}-${event.fields["Event Start Time"]}`}
+                      />
+                    ))}
+                  </Flex>
+                ) : (
+                  <Flex
+                    direction="column"
+                    bgColor="white"
+                    paddingX={8}
+                    paddingY={4}
+                    color="black"
+                    fontFamily="Dagheest"
+                    fontSize="md"
+                  >
+                    <Text>
+                      There are no side events scheduled yet! Check back soon.
+                    </Text>
+                  </Flex>
+                )}
               </Flex>
             </StyledBox>
             <StyledBox title="speakers" id="speakers">
