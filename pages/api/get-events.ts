@@ -7,7 +7,7 @@ const getEvents = (req, res) => {
       eventSubmissionsTable
         .select({
           view: "Approved Events",
-          sort: [{ field: "Created At", direction: "desc" }]
+          sort: [{ field: "Event Start Time", direction: "asc" }]
         })
         .eachPage(
           (records, fetchNextPage) => {
