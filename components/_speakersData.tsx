@@ -37,7 +37,7 @@ export const speakers: Speaker[] = [
     nameOne: "Noun",
     orgOne: "Nouns DAO",
     imageOne: "/noun.jpeg",
-    nameTwo: "Callum Howard",
+    nameTwo: "Callum Gladstone",
     orgTwo: "FireEyes",
     imageTwo: "/callum.jpeg"
   },
