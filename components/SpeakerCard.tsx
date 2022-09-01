@@ -24,7 +24,6 @@ export interface Speaker {
 
 const SpeakerCard = ({
   title,
-  sessionTime,
   nameOne,
   orgOne,
   imageOne,
@@ -41,7 +40,7 @@ const SpeakerCard = ({
     width={{ base: "60vw", md: "100%" }}
     minHeight={{ base: "0", md: "0" }}
   >
-    <SpeakerBox title={sessionTime} showIcon={false}>
+    <SpeakerBox showIcon={false}>
       <Flex direction={{ base: "column", lg: "row" }}>
         <Flex
           paddingY={4}

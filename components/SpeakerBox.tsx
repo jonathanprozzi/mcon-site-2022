@@ -41,27 +41,10 @@ const SpeakerBox = ({
         justifyContent="space-between"
         alignItems="center"
         width="100%"
-        onClick={handleCollapseContent}
-        _hover={{
-          cursor: 'url("/Mouse.png"), pointer'
-        }}
       >
-        {title && (
-          <>
-            {collapsedContent ? (
-              <Flex width="100%">
-                <Text
-                  color="black"
-                  fontFamily="Dagheest-Italic"
-                  fontStyle="italic"
-                  paddingX={6}
-                  paddingY={1}
-                  width="100%"
-                >
-                  {title}
-                </Text>
-              </Flex>
-            ) : (
+        <>
+          {collapsedContent ? (
+            <Flex width="100%">
               <Text
                 color="black"
                 fontFamily="Dagheest-Italic"
@@ -72,9 +55,21 @@ const SpeakerBox = ({
               >
                 {title}
               </Text>
-            )}
-          </>
-        )}
+            </Flex>
+          ) : (
+            <Text
+              color="black"
+              fontFamily="Dagheest-Italic"
+              fontStyle="italic"
+              paddingX={6}
+              paddingY={1}
+              width="100%"
+              height="1rem"
+            >
+              {title}
+            </Text>
+          )}
+        </>
         {showIcon && (
           <IconButton
             aria-label="Close box"
