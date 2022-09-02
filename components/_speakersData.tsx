@@ -59,7 +59,7 @@ export const speakers: Speaker[] = [
     orgOne: "Mirror DAO",
     imageOne: "/rafa0.jpeg",
     nameTwo: "Kevin Owocki",
-    orgTwo: "Gitcoinl",
+    orgTwo: "Gitcoin",
     imageTwo: "/kevinowocki.jpeg"
   },
   {
@@ -74,7 +74,7 @@ export const speakers: Speaker[] = [
     imageTwo: "/davidhoffman.png"
   },
   {
-    title: "Do We Realy Need Another DAO Tooling Project?",
+    title: "Do We Really Need Another DAO Tooling Project?",
     sessionTime: "day 1 // 13:40",
     nameOne: "Julia Rosenberg",
     orgOne: "Orca",

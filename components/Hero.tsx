@@ -18,6 +18,7 @@ import SpeakersGrid from "components/SpeakersGrid";
 import EventCard from "components/EventCard";
 import EventDetails from "components/EventDetails";
 import SponsorsGrid from "./SponsorsGrid";
+import MainEventsSection from "./MainEventsSection";
 
 interface HeroProps {
   heroHeight?: string;
@@ -107,7 +108,7 @@ const Hero = ({ heroHeight = "100vh" }: HeroProps) => {
                 </Text>
               </Flex>
             </StyledBox>
-            <StyledBox title="details" id="details" width="100%">
+            <StyledBox title="events schedule" id="event-schedule" width="100%">
               <Flex
                 direction="column"
                 bgColor="white"
@@ -117,25 +118,18 @@ const Hero = ({ heroHeight = "100vh" }: HeroProps) => {
                 fontFamily="Dagheest"
                 fontSize="xl"
               >
-                <Text>
-                  Join the Meta Network as we head to DAOSchool, This year MCON
-                  takes over a boutique high school campus in downtown denver
-                  &quot;Evan School&quot; on Acoma.
+                <Text
+                  as="h3"
+                  fontSize="2xl"
+                  fontWeight="bolder"
+                  marginBottom={4}
+                >
+                  Main Events Schedule
                 </Text>
-                <br />
-                <Text>
-                  If you&apos;ve only ever dreamed of drinking tequila in
-                  between classes we&apos;re here to make it a reality.
+                <Text marginBottom={2}>
+                  These all take place in the auditorium!
                 </Text>
-                <br />
-                <Text>
-                  With 6 classrooms of experiences to choose from, a main hall
-                  seating only 200 people you&apos;ll be encouraged to choose
-                  your own adventure while attending different talks and
-                  discussions. Worst comes to worse you can always form a circle
-                  on the lawn.
-                </Text>
-                <br />
+                <MainEventsSection />
                 <Text
                   as="h3"
                   fontSize="2xl"

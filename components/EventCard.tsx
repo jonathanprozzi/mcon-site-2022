@@ -5,7 +5,7 @@ interface IEvent {
   title: string;
   description: string;
   startTime: string;
-  endTime: string;
+  endTime?: string;
 }
 
 const EventCard = ({ title, description, startTime, endTime }: IEvent) => {
