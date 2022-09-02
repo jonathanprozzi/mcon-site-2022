@@ -1,19 +1,9 @@
-import {
-  Box,
-  AspectRatio,
-  Flex,
-  Heading,
-  Img,
-  Text,
-  VStack,
-  HStack
-} from "@chakra-ui/react";
+import { Box, Flex, Text, VStack, HStack } from "@chakra-ui/react";
 import Image from "next/image";
 import SpeakerBox from "./SpeakerBox";
 
 export interface Speaker {
   title: string;
-  sessionTime: string;
   nameOne: string;
   orgOne: string;
   imageOne: string;
@@ -53,7 +43,6 @@ const SpeakerCard = ({
             <Box
               position="relative"
               borderRadius="999px"
-              // backgroundColor="primaryNeon"
               left="25%"
               marginBottom="-40px"
             >
