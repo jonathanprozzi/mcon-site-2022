@@ -130,12 +130,7 @@ const Hero = ({ heroHeight = "100vh" }: HeroProps) => {
                   These all take place in the auditorium!
                 </Text>
                 <MainEventsSection />
-                <Text
-                  as="h3"
-                  fontSize="2xl"
-                  fontWeight="bolder"
-                  marginBottom={4}
-                >
+                <Text as="h3" fontSize="2xl" fontWeight="bolder" marginY={4}>
                   Side Events Schedule
                 </Text>
                 {data?.length > 0 ? (

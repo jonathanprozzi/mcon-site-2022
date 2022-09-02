@@ -19,17 +19,16 @@ const MainEventCard = ({
   orgTwo
 }: IEvent) => {
   return (
-    <Flex direction={{ base: "column", lg: "row" }} bgColor="primaryNeon">
+    <Flex direction={{ base: "column", lg: "column" }} bgColor="primaryNeon">
       <Flex
-        paddingY={4}
+        paddingY={2}
         paddingLeft={4}
-        flexBasis="40%"
         flexDirection="column"
         justifyContent="center"
         alignItems="center"
         wrap="wrap"
       >
-        <Flex direction="column" justifyContent="center">
+        <Flex direction="column" justifyContent="center" width="100%">
           <Text
             color="primaryRed"
             fontFamily="Dagheest"
@@ -49,33 +48,44 @@ const MainEventCard = ({
         </Flex>
       </Flex>
       <Flex
-        flexBasis="60%"
         paddingY={1}
-        paddingRight={1}
+        paddingX={4}
         width="100%"
-        wordBreak="break-word"
+        justifyContent="space-around"
       >
         {title !== "Break" && (
-          <Text
-            fontFamily="Dagheest"
-            bgColor="primaryRed"
-            color="primaryNeon"
-            border="2px solid"
-            borderColor="primaryNeon"
-          >
-            {nameOne} - {orgOne}
-          </Text>
+          <Flex flexBasis="50%" width="100%">
+            <Text
+              paddingX={2}
+              width="100%"
+              fontFamily="Dagheest"
+              bgColor="primaryRed"
+              color="primaryNeon"
+              border="2px solid"
+              borderColor="primaryNeon"
+            >
+              {nameOne}({orgOne})
+            </Text>
+          </Flex>
         )}
         {title !== "Break" && (
-          <Text
-            fontFamily="Dagheest"
-            bgColor="primaryRed"
-            color="primaryNeon"
-            border="2px solid"
-            borderColor="primaryNeon"
-          >
-            {nameTwo} - {orgTwo}
-          </Text>
+          <>
+            {nameTwo && (
+              <Flex flexBasis="50%" width="100%">
+                <Text
+                  paddingX={2}
+                  width="100%"
+                  fontFamily="Dagheest"
+                  bgColor="primaryRed"
+                  color="primaryNeon"
+                  border="2px solid"
+                  borderColor="primaryNeon"
+                >
+                  {nameTwo ?? nameTwo} ({orgTwo ?? orgTwo})
+                </Text>
+              </Flex>
+            )}
+          </>
         )}
       </Flex>
     </Flex>
