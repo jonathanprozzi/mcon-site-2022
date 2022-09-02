@@ -15,7 +15,6 @@ const sortedSpeakers = speakers.sort((a, b) => {
 const SpeakersGrid = () => (
   <SimpleGrid
     columns={{ base: 1 }}
-    // spacing={{ base: "4", md: "12", lg: "16" }}
     spacing={{ base: 4 }}
     alignItems="flex-start"
     justifyItems="center"
@@ -24,7 +23,6 @@ const SpeakersGrid = () => (
       <SpeakerCard
         key={speaker.sessionTime}
         title={speaker.title}
-        sessionTime={speaker.sessionTime}
         nameOne={speaker.nameOne}
         orgOne={speaker.orgOne}
         imageOne={speaker.imageOne}
