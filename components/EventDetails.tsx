@@ -48,7 +48,8 @@ const EventDetails = ({ events }: EventsProps) => {
       >
         <ChakraLink
           isExternal
-          href="https://calendar.google.com/calendar/embed?src=frdm8ja96g96c059nm8ejii8uk%40group.calendar.google.com&ctz=UTC"
+          // href="https://calendar.google.com/calendar/embed?src=frdm8ja96g96c059nm8ejii8uk%40group.calendar.google.com&ctz=UTC"
+          href="https://calendar.google.com/calendar/u/3?cid=ZnJkbThqYTk2Zzk2YzA1OW5tOGVqaWk4dWtAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ"
           _hover={{
             textDecoration: "none"
           }}
