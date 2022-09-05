@@ -62,17 +62,17 @@ export const speakers: Speaker[] = [
     orgTwo: "Gitcoin",
     imageTwo: "/kevinowocki.jpeg"
   },
-  {
-    title:
-      "Headless Bands: Web3 x Music. Where Experimentation on the Fringes is Going",
-    sessionTime: "day 1 // 12:40",
-    nameOne: "Matthew",
-    orgOne: "SongCamp",
-    imageOne: "/matthew.jpeg",
-    nameTwo: "David Hoffman",
-    orgTwo: "Bankless",
-    imageTwo: "/davidhoffman.png"
-  },
+  // {
+  //   title:
+  //     "Headless Bands: Web3 x Music. Where Experimentation on the Fringes is Going",
+  //   sessionTime: "day 1 // 12:40",
+  //   nameOne: "Matthew",
+  //   orgOne: "SongCamp",
+  //   imageOne: "/matthew.jpeg",
+  //   nameTwo: "David Hoffman",
+  //   orgTwo: "Bankless",
+  //   imageTwo: "/davidhoffman.png"
+  // },
   {
     title: "Do We Really Need Another DAO Tooling Project?",
     sessionTime: "day 1 // 13:40",
@@ -103,17 +103,17 @@ export const speakers: Speaker[] = [
     orgTwo: "MCV, LAO, Red DAO, Noise DAO",
     imageTwo: "/katia.jpeg"
   },
-  {
-    title:
-      "Navigating Governance Hell and How to Prevent Chaos: The Value of Distributed Governance",
-    sessionTime: "day 2 // 12:30",
-    nameOne: "MonetSupply",
-    orgOne: "Tally",
-    imageOne: "/monetsupply.jpeg",
-    nameTwo: "Frogmonkee",
-    orgTwo: "Orca",
-    imageTwo: "/frogmonkee.jpeg"
-  },
+  // {
+  //   title:
+  //     "Navigating Governance Hell and How to Prevent Chaos: The Value of Distributed Governance",
+  //   sessionTime: "day 2 // 12:30",
+  //   nameOne: "MonetSupply",
+  //   orgOne: "Tally",
+  //   imageOne: "/monetsupply.jpeg",
+  //   nameTwo: "Frogmonkee",
+  //   orgTwo: "Orca",
+  //   imageTwo: "/frogmonkee.jpeg"
+  // },
   {
     title: "The Evolution of Gnosis DAO (Gnosis Safe, CowSwap, Gnosis Chain)",
     sessionTime: "day 2 // 11:00",
