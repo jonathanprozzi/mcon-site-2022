@@ -34,8 +34,8 @@ const EventCard = ({ title, description, startTime, endTime }: IEvent) => {
           fontWeight="bold"
           fontSize="md"
         >
-          {format(new Date(startTime), "Pp")} -{" "}
-          {format(new Date(endTime), "Pp")}
+          {format(new Date(startTime), "HH:mm")} -{" "}
+          {format(new Date(endTime), "HH:mm")}
         </Text>
       </Flex>
       <Flex
