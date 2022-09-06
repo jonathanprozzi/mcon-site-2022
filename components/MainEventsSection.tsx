@@ -6,8 +6,14 @@ const dayOneEvents = mainEvents.filter(event => event.sessionDay === "day 1");
 const dayTwoEvents = mainEvents.filter(event => event.sessionDay === "day 2");
 
 const MainEventsSection = () => (
-  <Flex direction="column" bgColor="primaryRed" padding={4} gap={4}>
+  <Flex
+    direction="column"
+    bgColor="primaryRed"
+    padding={{ base: 1, lg: 4 }}
+    gap={4}
+  >
     <Text>Day One</Text>
+
     {dayOneEvents.map(event => (
       <MainEventCard
         key={event.sessionTime}

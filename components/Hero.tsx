@@ -94,7 +94,7 @@ const Hero = ({ heroHeight = "100vh" }: HeroProps) => {
           <Flex direction={{ base: "column" }} marginX={8} gap={8}>
             <StyledBox title="mcon.gif" showIcon>
               {isMobile ? (
-                <Image src="/MCON2.gif" width={350} height={350} />
+                <Image src="/MCON2.gif" width={400} height={350} />
               ) : (
                 <Image src="/MCON2.gif" width={800} height={700} />
               )}
