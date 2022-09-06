@@ -48,6 +48,7 @@ const MainEventCard = ({
         </Flex>
       </Flex>
       <Flex
+        direction={{ base: "column", lg: "row" }}
         paddingY={1}
         paddingX={4}
         width="100%"
@@ -71,7 +72,7 @@ const MainEventCard = ({
         {title !== "Break" && (
           <>
             {nameTwo && (
-              <Flex flexBasis="50%" width="100%">
+              <Flex flexBasis={{ base: "100%", md: "50%" }} width="100%">
                 <Text
                   paddingX={2}
                   width="100%"
