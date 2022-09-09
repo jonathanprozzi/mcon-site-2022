@@ -138,7 +138,7 @@ export const mainEvents: Event[] = [
     sessionDay: "day 2",
     sessionTime: "13:00",
     nameOne: "Adam",
-    orgOne: "Code Arena",
+    orgOne: "Code4rena",
     nameTwo: "Kolten",
     orgTwo: "1kx"
   },

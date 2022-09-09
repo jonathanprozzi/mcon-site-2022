@@ -87,7 +87,7 @@ export const speakers: Speaker[] = [
     title: "Scaling the Service DAO Model",
     sessionTime: "day 2 // 13:00",
     nameOne: "Adam",
-    orgOne: "Code Arena",
+    orgOne: "Code4rena",
     imageOne: "/adam.jpeg",
     nameTwo: "Kolten",
     orgTwo: "1kx",
